@@ -8,7 +8,7 @@
 
 # Preparation
 
-### If you come with your own laptop please make sure you installed the following pices of software to your PC:
+### If you come with your own laptop please make sure you installed the following pieces of software to your PC:
 
 * [Git](#git)
 * [Node & npm](#node-with-npm)
