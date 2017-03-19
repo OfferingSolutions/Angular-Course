@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Angular Js Demo Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+<!-- Custom styles for this template -->
+<!--<link href="starter-template.css" rel="stylesheet">-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-ng-app="AngularJsDemoApp">
+
+    <div class="container">
+
+        <p>
+            <h3>Simple Component</h3>
+            <my-Component></my-Component>
+        </p>
+
+        <hr/>
+        <div>
+            <p>
+                <h3>Simple Component</h3>
+                <my-Second-Component></my-Second-Component>
+            </p>
+        </div>
+
+        <hr/>
+        <div ng-controller="firstController as vm">
+            <p>
+                <h3>Isolated Scope</h3>
+                <isolated-Scope-Component text="vm.text"></isolated-Scope-Component>
+                <isolated-Scope-Component text="vm.text2"></isolated-Scope-Component>
+            </p>
+        </div>
+        <hr/>
+        <div ng-controller="secondController as vm">
+            <h3>Beautiful Component</h3>
+            <beautiful-Component twoway="vm.items"></beautiful-Component>
+        </div>
+        <hr/>
+        <div ng-controller="secondController as vm">
+
+
+            <h2>Beautiful Component 2</h2>
+            <h3>Outside Component</h3>
+            <ul>
+                <li ng-repeat="item in vm.itemstwoway">{{ ::item }}</li>
+            </ul>
+
+            <h3>Inside Component</h3>
+            <hello-World stringbinding="hey ho stringbinding" oneway="vm.items" twoway="vm.itemstwoway" callback="vm.receiveCallback($event)"></hello-World>
+</div>
+
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+
+<script src="app/application.js"></script>
+<script src="app/home.controller.js"></script>
+
+<script src="app/helloWorldComponent/helloWorld.component.js"></script>
+<script src="app/helloWorldComponent/helloWorld.controller.js"></script>
+</body>
+
+</html>

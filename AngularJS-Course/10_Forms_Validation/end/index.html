@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Angular Js Demo Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-ng-app="AngularJsDemoApp">
+    <div class="container">
+        <div data-ng-controller="homeController as vm">
+            <h3>Two-Way Binding</h3>
+            <input type="text" ng-model="vm.userName">
+            <br/>
+            <span>{{vm.userName}}</span>
+
+            <hr/>
+
+            <h3>Submitting a Form with ng-submit</h3>
+            <form ng-submit="vm.submitForm()">
+                <input type="text" ng-model="vm.submittedUserName">
+                <br/>
+                <button type="submit">Send</button>
+            </form>
+
+            <hr/>
+
+            <h3>Form with validation</h3>
+            <form ng-submit="vm.submitValidatedForm()" name="myForm">
+                <input type="text" ng-model="vm.validatedUserName" name="validatedUserName" required ng-minlength="3">
+                <br/>
+
+                <h4 ng-show="myForm.validatedUserName.$invalid">Field Info</h4>
+                <span ng-show="myForm.validatedUserName.$error.required">Name is required<br/></span>
+                <span ng-show="myForm.validatedUserName.$error.minlength">Name has to have at least three Characters.<br/></span>
+
+                <h4>Form Info</h4>
+                <span>Is form valid: {{myForm.$valid}}.</span>
+                <br/>
+                <button type="submit" ng-disabled="myForm.$invalid">Send</button>
+            </form>
+
+            <hr/>
+
+            <h3>Form validation with ng-messages</h3>
+            <form ng-submit="vm.submitNgMessageValidatedForm()" name="myNgMessageForm">
+                <input type="text" ng-model="vm.validatedUserNameNgMessage" name="validatedUserNameNgMessage" ng-required="true" ng-minlength="3">
+                <br/>
+
+                <div ng-messages="myNgMessageForm.validatedUserNameNgMessage.$error">
+                    <p ng-message="minlength">The name is too short.</p>
+                    <p ng-message="required">The name is required.</p>
+                </div>
+                <h4>Form Info</h4>
+                <span>Is form valid: {{myNgMessageForm.$valid}}.</span>
+                <br/>
+                <br/>
+                <button type="submit" ng-disabled="myNgMessageForm.$invalid">Send</button>
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.js"></script>
+
+    <script src="app/application.js"></script>
+    <script src="app/home.controller.js"></script>
+</body>
+
+</html>

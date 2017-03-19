@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Angular Js Demo Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-ng-app="AngularJsDemoApp">
+
+    <div class="container">
+
+        <div data-ng-controller="homeController as vm">
+
+            <p>
+                <button data-ng-click="vm.toggleVisibilityWithNgShow()">ngShow</button>
+                <h3 ng-show="vm.isVisible">Can you see me? ng-show for the win</h3>
+            </p>
+            <hr/>
+            <p>
+                <button ng-click="vm.resetSwitch()">resetSwitch</button>
+                <button ng-click="vm.toggleVisibilityWithNgSwitch()">ng-switch</button>
+                <div ng-switch on="vm.switch">
+                    <h3 ng-switch-when="1">switch is 1</h3>
+                    <h3 ng-switch-when="2">switch is 2</h3>
+                    <h3 ng-switch-default>this is the default</h3>
+                </div>
+            </p>
+            <hr/>
+            <p>
+                <button ng-click="vm.toggleVisibilityWithNgIf()">Ng-If</button>
+                <h3 ng-if="vm.ngif">Can you see me? ng-if for the win</h3>
+            </p>
+            <hr/>
+            <p>
+                <h3>ngInclude</h3>
+                <div ng-include="'second.html'"></div>
+            </p>
+            <hr/>
+            <p>
+                <h3>ngRepeat</h3>
+                <ul>
+                    <li ng-repeat="item in vm.foodItems track by $index">
+                        item: {{item}} i: {{$index}} first: {{$first}} last:{{$last}} middle:{{$middle}} even:{{$even}} odd:{{$odd}}
+                    </li>
+                </ul>
+            </p>
+            <hr/>
+            <p>
+                <h3>Simple Directive</h3>
+                <my-Directive></my-Directive>
+            </p>
+            <hr/>
+            <div ng-controller="secondController as vm">
+                <p>
+                    <h3>Simple Directive - Same Scope</h3>
+                    <my-Second-Directive></my-Second-Directive>
+                </p>
+            </div>
+
+            <hr/>
+            <div ng-controller="secondController as vm">
+                <p>
+                    <h3>Isolated Scope</h3>
+                    <isolated-Scope-Directive text="vm.text"></isolated-Scope-Directive>
+                    <isolated-Scope-Directive text="vm.text2"></isolated-Scope-Directive>
+                </p>
+            </div>
+            <hr/>
+            <div ng-controller="secondController as vm">
+                <p>
+                    <h3>Isolated Scope With Link</h3>
+                    <isolated-Scope-Directive-With-Link text="vm.text"></isolated-Scope-Directive-With-Link>
+                </p>
+            </div>
+            <hr/>
+            <div>
+                <p>
+                    <h3>Isolated Scope With Controller</h3>
+                    <isolated-Scope-Directive-With-Controller></isolated-Scope-Directive-With-Controller>
+                </p>
+            </div>
+            <hr/>
+            <div ng-controller="thirdController as vm">
+                <beautiful-Directive datasource="vm.items"></beautiful-Directive>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+
+    <script src="app/application.js"></script>
+    <script src="app/home.controller.js"></script>
+</body>
+
+</html>

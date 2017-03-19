@@ -1,0 +1,9 @@
+<div class="starter-template">
+    <h1>FoodItems</h1>
+
+    <span *ngFor="let item of foodItems">
+        <a [routerLink]="['/product', item.id]">{{item.name}}</a>
+        <button (click)="goToDetails(item.id)">Gogogo</button>
+    </span>
+
+</div>
