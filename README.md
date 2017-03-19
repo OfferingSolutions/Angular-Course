@@ -16,7 +16,7 @@ You can start all repositories with `npm install` or `yarn install` followed by 
 
 See the instructions to get started here:
 
-## [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Tutorial)
+## [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course)
 
 I you are done with these you can start dive into the following chapters
 
