@@ -14,7 +14,7 @@ This repository contains material for getting started with AngularJS & Angular (
 
 See the instructions to get started here [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course)
 
-I you are done with these you can start dive into the following chapters
+If you are done with this you are ready to dive  into the following chapters with us
 
 1. [Angular Start](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
 2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
@@ -46,6 +46,3 @@ I you are done with these you can start dive into the following chapters
 11. [Forms and Validation](#)
 12. [Routing](#)
 13. [Testing](#)
-
-<hr/>
-
