@@ -1,4 +1,4 @@
-# Offering Solutions Angular Course (OSAC) by [Offering Solutions](https://offering.solutions/)
+# [Offering Solutions](https://offering.solutions/) Angular Course (OSAC)
 
 This repository contains material for getting started with AngularJS & Angular (both repos are currently worked on). They should provide a code base where you can start on learning or teaching Angular.
 
