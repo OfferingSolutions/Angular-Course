@@ -16,24 +16,24 @@ You can start all repositories with `npm install` or `yarn install` followed by 
 
 See the instructions to get started here:
 
-## [Angular Course preprations](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Tutorial)
+## [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Tutorial)
 
 I you are done with these you can start dive into the following chapters
 
-1. [Angular Start](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
-2. [Components Part I](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
-3. [Directives](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/02_Directives)
-4. [Components Part II](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/03_Components_Part_II)
-5. [Lifecycle](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/04_Lifecycle)
-6. [Observables](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/05_Observables)
-7. [Services](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/06_Services)
-8. [Dependency Injection](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/07_DependencyInjection)
-9. [Pipes](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/08_Pipes)
-10. [Forms](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/09_Forms)
-11. [Routing](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/10_Routing)
-12. [Modules](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/11_Modules)
-13. [Testing](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/12_Testing)
-14. [Webpack](https://github.com/FabianGosebrink/Offering-Solutions-Angular-Course/tree/master/Angular-Course/13_Webpack)
+1. [Angular Start](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
+2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
+3. [Directives](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/02_Directives)
+4. [Components Part II](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/03_Components_Part_II)
+5. [Lifecycle](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/04_Lifecycle)
+6. [Observables](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/05_Observables)
+7. [Services](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/06_Services)
+8. [Dependency Injection](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/07_DependencyInjection)
+9. [Pipes](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/08_Pipes)
+10. [Forms](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/09_Forms)
+11. [Routing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/10_Routing)
+12. [Modules](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/11_Modules)
+13. [Testing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/12_Testing)
+14. [Webpack](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/13_Webpack)
 
 ## Offering Solutions AngularJS Course
 
