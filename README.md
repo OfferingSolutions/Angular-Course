@@ -8,15 +8,11 @@ This repository contains material for getting started with AngularJS & Angular (
 
 [Demo](http://foodapi4demo.azurewebsites.net/)
 
-## AngularJS
-
-You can start all repositories with `npm install` or `yarn install` followed by a `npm start`. This will execute an  and start a lite-server afterwards. A browser should open automatically.
-
 ## Offering Solutions Angular Course
 
-See the instructions to get started here:
+### Preparations 
 
-## [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course)
+See the instructions to get started here [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course)
 
 I you are done with these you can start dive into the following chapters
 
