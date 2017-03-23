@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs/Rx';
 
 @Component({
-    moduleId: module.id,
     selector: 'my-app',
     templateUrl: './app.component.html'
 })
