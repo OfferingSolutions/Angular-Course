@@ -7,3 +7,4 @@ helper/**/*.*
 Angular-Course/12_Webpack/.dist
 Angular-Course/12_Webpack/aot
 Angular-Course/*/.vscode/
+Angular-Course/*/.dist/
