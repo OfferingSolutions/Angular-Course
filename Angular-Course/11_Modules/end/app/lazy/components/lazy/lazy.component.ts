@@ -2,7 +2,6 @@ import { CalculatorService } from './../../../core/services/calculator.service';
 import { Component } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'lazy',
     templateUrl: './lazy.component.html'
 })
