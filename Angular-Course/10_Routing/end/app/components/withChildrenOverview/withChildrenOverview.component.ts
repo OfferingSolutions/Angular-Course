@@ -2,7 +2,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'withChildrenOverview',
     templateUrl: 'withChildrenOverview.component.html'
 })

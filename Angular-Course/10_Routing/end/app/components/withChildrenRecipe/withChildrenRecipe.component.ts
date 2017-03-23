@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-    moduleId: module.id,
     selector: 'withChildrenRecipe',
     templateUrl: 'withChildrenRecipe.component.html'
 })

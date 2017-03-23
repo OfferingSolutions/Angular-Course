@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
-    moduleId: module.id,
     selector: 'productDetails',
     templateUrl: 'productDetails.component.html'
 })

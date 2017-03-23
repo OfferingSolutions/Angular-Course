@@ -2,7 +2,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'withChildren',
     templateUrl: 'withChildren.component.html'
 })
