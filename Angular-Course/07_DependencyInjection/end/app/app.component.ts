@@ -3,7 +3,6 @@ import { CalculatorService } from './shared/services/calculator.service';
 import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
-    moduleId: module.id,
     selector: 'my-app',
     templateUrl: './app.component.html'
 })
