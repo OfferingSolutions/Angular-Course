@@ -72,8 +72,6 @@ on your commandline seeing something like this:
 
 ![yarn](../.github/yarn.png "yarn")
 
-Do not be scared about the error. We will explain everything about that in the course.
-
 ## Visual Studio Code
 
 Generally you can use every text editor you want to implement Angular applications. We will use Visual Studio Code in this course. We will do an introduction to this editor and extend it with useful plugins to make our dev life a little easier.
