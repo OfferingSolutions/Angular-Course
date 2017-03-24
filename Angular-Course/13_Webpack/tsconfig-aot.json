@@ -16,7 +16,7 @@
   "files": [
     "app/app.module.ts",
     "app/lazy/lazy.module.ts",
-    "app/main.ts"
+    "app/main-aot.ts"
   ],
   "angularCompilerOptions": {
     "genDir": "aot",
