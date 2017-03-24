@@ -70,7 +70,7 @@ Please make sure that afterwards you are able to type
 
 on your commandline seeing something like this:
 
-![yarn](../.github/yarn.png "yarn")
+![yarn](../.github/yarnnew.png "yarn")
 
 ## Visual Studio Code
 
