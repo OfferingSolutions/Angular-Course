@@ -13,7 +13,7 @@
 * [Git](#git)
 * [Node & npm](#node-with-npm)
 * [Typescript](#typescript)
-* [Yarn (not necessary)](#yarn)
+* [Yarn (not necessary)](#yarn-not-necessary-but-nice-to-have)
 * [Visual Studio Code](#visual-studio-code)
 
 ## Git
