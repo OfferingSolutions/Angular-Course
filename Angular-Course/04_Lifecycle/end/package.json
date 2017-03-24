@@ -1,5 +1,5 @@
 {
-  "name": "angular2-quickstart",
+  "name": "offeringsolutionsangularcourse-osac",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --open",
