@@ -9,19 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { CalculatorService } from './../../../core/services/calculator.service';
 import { Component } from '@angular/core';
-export var LazyComponent = (function () {
+var LazyComponent = (function () {
     function LazyComponent(myService) {
         this.myService = myService;
         this.result = myService.add(1, 2);
         this.lazyRandomNumber = myService.getRandomNumber();
     }
-    LazyComponent = __decorate([
-        Component({
-            selector: 'lazy',
-            templateUrl: './lazy.component.html'
-        }), 
-        __metadata('design:paramtypes', [CalculatorService])
-    ], LazyComponent);
     return LazyComponent;
 }());
+LazyComponent = __decorate([
+    Component({
+        selector: 'lazy',
+        templateUrl: './lazy.component.html'
+    }),
+    __metadata("design:paramtypes", [CalculatorService])
+], LazyComponent);
+export { LazyComponent };
 //# sourceMappingURL=lazy.component.js.map

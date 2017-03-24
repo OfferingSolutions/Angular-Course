@@ -2,9 +2,16 @@
   "name": "offeringsolutionsangularcourse-osac",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "tsc && concurrently \"webpack-dev-server --inline --port 8080 --open\" ",
+    "lite": "lite-server --config=config/lite-prod-config.json",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
+    "lint": "tslint ./app/**/*.ts -t verbose",
+    "ngc": "ngc -p tsconfig-aot.json --locale=en-US",
+    "webpack-dev": "set NODE_ENV=development && webpack",
+    "webpack-prod": "npm run ngc && set NODE_ENV=production && webpack",
+    "buildAll": "npm run webpack-dev && npm run webpack-prod && gulp build:all"
   },
   "license": "ISC",
   "dependencies": {
@@ -31,9 +38,12 @@
     "@types/jasmine": "^2.5.46",
     "@types/node": "^7.0.10",
     "@types/selenium-webdriver": "^3.0.0",
+    "angular2-router-loader": "^0.3.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.1.2",
     "canonical-path": "0.0.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "compression-webpack-plugin": "^0.3.2",
     "concurrently": "^3.4.0",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -45,7 +55,7 @@
     "tslint": "^4.5.1",
     "typescript": "~2.2.1",
     "webdriver-manager": "12.0.4",
-    "webpack-dev-server": "^2.4.2",
-    "webpack": "^2.3.1"
+    "webpack": "^2.3.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

@@ -25,6 +25,7 @@ AppModule = __decorate([
             BrowserModule,
             FormsModule,
             SharedModule,
+            // RouterModule.forRoot(AppRoutes, { preloadingStrategy: PreloadAllModules })
             RouterModule.forRoot(AppRoutes),
             CoreModule,
             HomeModule,

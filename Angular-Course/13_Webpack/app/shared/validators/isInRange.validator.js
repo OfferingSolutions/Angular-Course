@@ -10,6 +10,7 @@ var IsInRangeValidator = IsInRangeValidator_1 = (function () {
     function IsInRangeValidator() {
     }
     IsInRangeValidator.prototype.validate = function (c) {
+        // self value (e.g. retype password)
         if (c.value > 2147483647 || c.value < 0) {
             return {
                 isInRange: {

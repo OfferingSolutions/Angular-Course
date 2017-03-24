@@ -16,9 +16,11 @@ var SharedModule = (function () {
 SharedModule = __decorate([
     NgModule({
         imports: [
+            // Modules
             CommonModule
         ],
         declarations: [
+            // Components & directives
             IsNumberValidator,
             IsInRangeValidator
         ],

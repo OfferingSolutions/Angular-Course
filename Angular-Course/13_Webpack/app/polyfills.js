@@ -1,4 +1,4 @@
-import 'ie-shim';
+import 'ie-shim'; // Internet Explorer 9 support.
 import 'reflect-metadata';
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';

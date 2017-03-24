@@ -11,12 +11,14 @@ var IsNumberValidator = IsNumberValidator_1 = (function () {
     }
     IsNumberValidator.prototype.validate = function (c) {
         if (isNaN(+c.value)) {
+            // console.log(c.value + " is not a number");
             return {
                 isNumber: {
                     valid: false
                 }
             };
         }
+        // console.log(c.value + " is a number");
         return null;
     };
     return IsNumberValidator;
