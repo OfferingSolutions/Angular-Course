@@ -30,7 +30,7 @@
         <div class="form-group">
             <label for="foodName">Name</label>
             <input type="text" name="foodName" class="form-control" id="foodName" placeholder="Foodname" [(ngModel)]="currentFood.name"
-                required>
+                required #templatereferencvariable>
 
             <div *ngIf="f?.controls?.foodName?.hasError('required') && (f?.controls?.foodName?.dirty && !f.submitted)" class="alert alert-danger">
                 *
@@ -56,6 +56,8 @@
         </div>
         <button type="submit" class="btn btn-primary" (click)="AddOrUpdateFoodWithValidation()" [disabled]="!f?.valid">Submit</button>
     </form>
+
+    <!--{{templatereferencvariable.className | json}} <br/> {{f.value | json}}-->
 
 </div>
 <!-- /.container -->
