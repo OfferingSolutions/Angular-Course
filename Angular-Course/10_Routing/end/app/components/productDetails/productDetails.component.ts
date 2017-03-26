@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'productDetails',
@@ -7,14 +9,18 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-    public id: number;
+    public id: Observable<number>;
 
-    constructor(private _route: ActivatedRoute) { }
+    constructor(private route: ActivatedRoute) { }
 
     ngOnInit() {
-        this._route.params.forEach((params: Params) => {
-            let id = +params['id'];
-            this.id = id;
-        });
+        // this._route.params.forEach((params: Params) => {
+        //     let id = +params['id'];
+        //     this.id = id;
+        // });
+
+        this.id = this.route
+            .queryParams
+            .map(params => +params['id'] || -1);
     }
 }
