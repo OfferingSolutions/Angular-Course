@@ -19,8 +19,11 @@ export class ProductDetailsComponent implements OnInit {
         //     this.id = id;
         // });
 
-        this.id = this.route
-            .queryParams
-            .map(params => +params['id'] || -1);
+        // this.id = this.route
+        //     .queryParams
+        //     .map(params => +params['id'] || -1);
+
+        this.id = this.route.queryParamMap
+            .map(paramMap => +paramMap.get('id') || -1);
     }
 }
