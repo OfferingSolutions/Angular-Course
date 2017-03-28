@@ -8,24 +8,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var common_1 = require('@angular/common');
-var calculator_service_1 = require('./services/calculator.service');
+var core_module_1 = require('./../core/core.module');
+var lazy_component_1 = require('./components/lazy/lazy.component');
+var shared_module_1 = require('./../shared/shared.module');
+var lazy_routing_1 = require('./lazy.routing');
+var router_1 = require('@angular/router');
 var core_1 = require('@angular/core');
-var CoreModule = (function () {
-    function CoreModule() {
+var common_1 = require('@angular/common');
+var LazyModule = (function () {
+    function LazyModule() {
     }
-    CoreModule = __decorate([
+    LazyModule = __decorate([
         core_1.NgModule({
             imports: [
-                common_1.CommonModule
+                // Modules
+                common_1.CommonModule,
+                shared_module_1.SharedModule,
+                core_module_1.CoreModule,
+                router_1.RouterModule.forChild(lazy_routing_1.LazyRoutes)
             ],
-            exports: [],
-            declarations: [],
-            providers: [calculator_service_1.CalculatorService],
+            declarations: [
+                // Components & directives
+                lazy_component_1.LazyComponent
+            ],
+            providers: [],
+            exports: []
         }), 
         __metadata('design:paramtypes', [])
-    ], CoreModule);
-    return CoreModule;
+    ], LazyModule);
+    return LazyModule;
 }());
-exports.CoreModule = CoreModule;
-//# sourceMappingURL=core.module.js.map
+exports.LazyModule = LazyModule;
+//# sourceMappingURL=lazy.module.js.map

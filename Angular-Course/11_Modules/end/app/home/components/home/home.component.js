@@ -8,10 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var calculator_service_1 = require("./../../../core/services/calculator.service");
-var foodItem_1 = require("./../../../models/foodItem");
-var core_1 = require("@angular/core");
+var calculator_service_1 = require('./../../../core/services/calculator.service');
+var foodItem_1 = require('./../../../models/foodItem');
+var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent(myService) {
         var _this = this;
@@ -28,15 +27,14 @@ var HomeComponent = (function () {
         this.result = myService.add(1, 2);
         this.randomNumber = myService.getRandomNumber();
     }
+    HomeComponent = __decorate([
+        core_1.Component({
+            selector: 'home',
+            templateUrl: './home.component.html'
+        }), 
+        __metadata('design:paramtypes', [calculator_service_1.CalculatorService])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'home',
-        templateUrl: './home.component.html'
-    }),
-    __metadata("design:paramtypes", [calculator_service_1.CalculatorService])
-], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map
