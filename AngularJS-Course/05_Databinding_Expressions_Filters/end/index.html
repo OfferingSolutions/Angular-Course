@@ -54,7 +54,11 @@
             <h3 ng-bind="dateForFilter | date:'medium'"></h3>
             <h3 ng-bind="dateForFilter | date:'MMM d, y h:mm:ss a'"></h3>
             
-            <h3 ng-bind="foodItems | limitTo:1"></h3>
+            <ul>
+                <li ng-repeat="x in foodItems | limitTo : 1">
+                    <h3>{{x}}</h3>
+                </li>
+            </ul>
         </div>
     </div>
     <script src="node_modules/angular/angular.js"></script>
