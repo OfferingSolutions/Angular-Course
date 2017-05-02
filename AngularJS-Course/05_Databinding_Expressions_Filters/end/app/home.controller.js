@@ -13,12 +13,12 @@
         }
 
         $scope.add = function (a, b) {
-            return a + b;
+            return a + b ;
         }
 
         $scope.foodItem = { calories: 500 }
 
-       $scope.foodItems = ["Burger", "Pommes", "Nudeln"];
+        $scope.foodItems = ["Burger", "Pommes", "Nudeln"];
 
         $scope.dateForFilter = new Date();
     }
@@ -39,4 +39,4 @@
         .controller("homeController", homeController)
         .filter('myCustomFilter', myCustomFilter);
 
-} ());
+}());
