@@ -24,15 +24,15 @@
     }
 
 
-    function parentCtrl($scope) {
-        var parent = this;
+    function childController($scope) {
+        var child = this;
 
         $scope.$on('parent', function (event, data) {
             console.log(data); // 'This comes from an event'
-            parent.data = data;
+            child.data = data;
         });
 
-        parent.throwEventUp = function () {
+        child.throwEventUp = function () {
             $scope.$emit('fromChild', 'This comes from the child');
         }
     }
@@ -41,6 +41,6 @@
     angular
         .module("AngularJsDemoApp")
         .controller("homeController", homeController)
-        .controller("parentCtrl", parentCtrl);
+        .controller("childController", childController);
 
 } ());

@@ -37,7 +37,7 @@
 
     <div class="container">
         <div ng-controller="homeController as vm">
-            <button ng-click="vm.sayMyName()">Show my Name</button>
+            <button ng-click="vm.sayMyName()">Show my Name & throw event</button>
             <p>{{ vm.myName }}</p>
             <br/>
 
@@ -45,10 +45,10 @@
                 <li ng-repeat="item in vm.items" ng-click="vm.alertTheItem(item)">{{item}}</li>
             </ul>
 
-            <div ng-controller="parentCtrl as parent">
-                {{ parent.data }}
+            <div ng-controller="childController as child">
+                {{ child.data }}
                 <br/>
-                <button ng-click="parent.throwEventUp()">Throw Event Up</button>
+                <button ng-click="child.throwEventUp()">Throw Event Up</button>
             </div>
 
         </div>
