@@ -2,7 +2,7 @@
     "name": "angular-tutorial-chapter-one-helloworld",
     "version": "1.0.0",
     "scripts": {
-        "start": "npm install && npm run lite",
+        "start": "npm run lite",
         "lite": "lite-server"
     },
     "license": "ISC",
