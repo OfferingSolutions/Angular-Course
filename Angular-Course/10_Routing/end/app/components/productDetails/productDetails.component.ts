@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
         //     .queryParams
         //     .map(params => +params['id'] || -1);
 
-        this.id = this.route.queryParamMap
+        this.id = this.route.paramMap
             .map(paramMap => +paramMap.get('id') || -1);
     }
 }
