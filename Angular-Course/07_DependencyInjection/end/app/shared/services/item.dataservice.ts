@@ -10,7 +10,7 @@ export class FoodDataService {
     public actionUrl: string;
 
     constructor(private _http: Http, private _configuration: Configuration) {
-        this.actionUrl = 'http://foodapi4demo.azurewebsites.net/api/food/';
+        this.actionUrl = 'http://foodapi4demo.azurewebsites.net/api/foods/';
     }
 
     public GetAllFood = (): Observable<FoodItem[]> => {
