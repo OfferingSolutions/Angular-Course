@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    public items: string[] = [
+    items: string[] = [
         'Hamburger',
         'Pommes',
         'Schnitzel'
