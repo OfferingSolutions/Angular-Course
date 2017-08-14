@@ -9,12 +9,12 @@ module.exports = {
         'vendor': './app/vendor.ts',
         'app': './app/main.ts'
     },
-    devtool: 'source-map',
+    devtool: 'cheap-module-eval-source-map',
     performance: {
         hints: false
     },
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+        extensions: ['.ts', '.js', '.json']
     },
     output: {
         filename: '[name].js',
@@ -26,26 +26,29 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: [
+                use: [
                     'awesome-typescript-loader',
                     'angular2-template-loader'
                 ]
             },
             {
                 test: /\.(png|jpg|gif|woff|woff2|ttf|svg|eot)$/,
-                loader: 'file-loader?name=assets/[name]-[hash:6].[ext]'
+                use: 'file-loader?name=assets/[name]-[hash:6].[ext]'
             },
             {
                 test: /favicon.ico$/,
-                loader: 'file-loader?name=/[name].[ext]'
+                use: 'file-loader?name=/[name].[ext]'
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             },
             {
                 test: /\.html$/,
-                loader: 'raw-loader'
+                use: 'raw-loader'
             }
         ]
     },
