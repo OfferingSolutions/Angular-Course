@@ -15,7 +15,7 @@
              Remove-Item .\package-lock.json -Force;
         }
 
-        <# ncu -a #>
+        ncu -a
 
         <# Remove-Item .\node_modules -Force -Recurse #>
     }
