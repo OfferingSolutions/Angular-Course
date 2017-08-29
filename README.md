@@ -1,6 +1,6 @@
 # [Offering Solutions](https://offering.solutions/) Angular Course (OSAC)
 
-This repository contains material for getting started with AngularJS & Angular (both repos are currently worked on). They should provide a code base where you can start on learning or teaching Angular.
+This repository contains material for getting started with Angular. It should provide a code base where you can start on learning or teaching Angular.
 
 [Twitter](https://twitter.com/FabianGosebrink/)
 
@@ -10,8 +10,7 @@ This repository contains material for getting started with AngularJS & Angular (
 
 ## Offering Solutions Angular Course
 
-
-If you are done with this you are ready to dive  into the following chapters with us
+If you are attending the course you are ready to dive into the following chapters with us
 
 1. [Angular Start](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
 2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
@@ -31,13 +30,12 @@ If you are done with this you are ready to dive  into the following chapters wit
 
 # Preparation
 
-See the instructions to get started here [Angular Course preprations](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course)
-
+See the instructions to get started
 
 ## Things you need to bring to get started with the course
 
 1. Dropbox - Account
-2. PC / Laptop (if the course is done via Digicomp PCs are already there and you are good to go)
+2. PC / Laptop
 3. Enthusiasm and the will to learn something new :-)
 
 ### If you come with your own laptop please make sure you installed the following pieces of software to your PC:
