@@ -6,7 +6,7 @@
         
         if ( Test-Path "./node_modules" ) {
             echo $_.DirectoryNamecls;
-            Remove-Item .\node_modules -Force -Recurse;
+            rimraf node_modules
         }
 
         
