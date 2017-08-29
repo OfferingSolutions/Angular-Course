@@ -14,6 +14,11 @@
             echo $_.DirectoryNamecls;
              Remove-Item .\package-lock.json -Force;
         }
+		
+		if ( Test-Path "./yarn.lock" ) {
+            echo $_.DirectoryNamecls;
+             Remove-Item .\yarn.lock -Force;
+        }
 
         ncu -a
 
