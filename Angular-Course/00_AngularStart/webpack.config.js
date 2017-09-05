@@ -58,7 +58,12 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.html'),
-        })
+        }),
+		
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)@angular/,
+            path.resolve(__dirname, '../src')
+        )
     ],
     devServer: {
         historyApiFallback: true,
