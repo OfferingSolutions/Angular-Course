@@ -1,5 +1,10 @@
 # [Offering Solutions](https://offering.solutions/) Angular Course (OSAC)
 
+<p align="center">
+  <img src=".github/oslogo.png" />
+</p>
+
+
 This repository contains material for getting started with Angular. It should provide a code base where you can start on learning or teaching Angular.
 
 [Twitter](https://twitter.com/FabianGosebrink/)
