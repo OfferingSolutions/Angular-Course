@@ -12,11 +12,11 @@ export class AppComponent {
         'Schnitzel'
     ];
 
-    private color: string = 'red';
+    private color = 'red';
 
-    public showItem: boolean = true;
+    showItem = true;
 
-    public toggleShowItem() {
+    toggleShowItem() {
         this.showItem = !this.showItem;
     }
 }

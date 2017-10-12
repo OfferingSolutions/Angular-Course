@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var CalculatorService = (function () {
     function CalculatorService() {
         this.random = Math.random() * 100;

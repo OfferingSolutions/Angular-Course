@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Response } from '@angular/http';
 import { Observable, Observer } from 'rxjs/Rx';
 
 @Component({
@@ -8,7 +10,9 @@ import { Observable, Observer } from 'rxjs/Rx';
 
 export class AppComponent {
 
-    constructor() {
+    name$: Observable<any>;
+
+    constructor(private http: HttpClient) {
         let data = new Observable((observer: Observer<number>) => {
             setTimeout(() => {
                 observer.next(42);
@@ -35,6 +39,13 @@ export class AppComponent {
 
 
 
-        // subscription.unsubscribe();
+        subscription.unsubscribe();
+
+        this.name$ = this.getNameAsync();
+    }
+
+
+    getNameAsync(): Observable<any> {
+        return this.http.get<any>('https://swapi.co/api/people/1/');
     }
 }

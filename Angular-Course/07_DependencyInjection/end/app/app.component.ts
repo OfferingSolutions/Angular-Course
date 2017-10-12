@@ -1,6 +1,8 @@
-import { FoodDataService } from './shared/services/item.dataservice';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+
 import { CalculatorService } from './shared/services/calculator.service';
-import { Component, OnInit, Inject } from '@angular/core';
+import { FoodDataService } from './shared/services/item.dataservice';
 
 @Component({
     selector: 'my-app',
@@ -12,6 +14,8 @@ export class AppComponent implements OnInit {
     public result: number;
     public randomWithFactoryValue: number;
     public randomWithValue: number;
+
+    observable$: Observable<any>;
 
     constructor(private calculatorService: CalculatorService,
         @Inject('RandomWithFactory') randomWithFactory: number,
@@ -25,5 +29,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.result = this.calculatorService.add(1, 3);
+
+        this.observable$ = this.dataService.getAllFood();
     }
 }

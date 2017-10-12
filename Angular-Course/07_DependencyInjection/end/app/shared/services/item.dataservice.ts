@@ -1,31 +1,32 @@
-import { Configuration } from './../../app.configuration';
 import { Injectable } from '@angular/core';
-import { FoodItem } from './../../models/foodItem';
-import { Http, Response, Headers, RequestOptionsArgs } from '@angular/http';
+import { Headers, Http, RequestOptionsArgs, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
+
+import { Configuration } from './../../app.configuration';
+import { FoodItem } from './../../models/foodItem';
 
 @Injectable()
 export class FoodDataService {
 
-    public actionUrl: string;
+    private actionUrl: string;
 
     constructor(private _http: Http, private _configuration: Configuration) {
         this.actionUrl = _configuration.baseUrl + 'api/foods/';
     }
 
-    public GetAllFood = (): Observable<FoodItem[]> => {
+    getAllFood(): Observable<FoodItem[]> {
         return this._http.get(this.actionUrl)
-            .map((response: Response) => <FoodItem[]>response.json())
+            .map((response: Response) => response.json())
             .catch(this.handleError);
     }
 
-    public GetSingleFood = (id: number): Observable<FoodItem> => {
+    getSingleFood(id: number): Observable<FoodItem> {
         return this._http.get(this.actionUrl + id)
             .map((response: Response) => <FoodItem>response.json())
             .catch(this.handleError);
     }
 
-    public AddFood = (foodItem: FoodItem): Observable<FoodItem> => {
+    addFood(foodItem: FoodItem): Observable<FoodItem> {
         let toAdd: string = JSON.stringify(
             {
                 name: foodItem.name,
@@ -41,7 +42,7 @@ export class FoodDataService {
             .catch(this.handleError);
     }
 
-    public UpdateFood = (id: number, foodToUpdate: FoodItem): Observable<FoodItem> => {
+    updateFood(id: number, foodToUpdate: FoodItem): Observable<FoodItem> {
         let options = this.prepareOptions(null);
 
         return this._http.put(this.actionUrl + id, JSON.stringify(foodToUpdate), options)
@@ -49,7 +50,7 @@ export class FoodDataService {
             .catch(this.handleError);
     }
 
-    public DeleteFood = (id: number): Observable<Response> => {
+    deleteFood(id: number): Observable<Response> {
         return this._http.delete(this.actionUrl + id)
             // .do(() => this.foodDeleted.emit(null))
             .catch(this.handleError);

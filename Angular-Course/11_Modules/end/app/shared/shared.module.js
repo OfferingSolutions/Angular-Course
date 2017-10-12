@@ -5,13 +5,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var isInRange_validator_1 = require('./validators/isInRange.validator');
-var isNumber_validator_1 = require('./validators/isNumber.validator');
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+Object.defineProperty(exports, "__esModule", { value: true });
+var isInRange_validator_1 = require("./validators/isInRange.validator");
+var isNumber_validator_1 = require("./validators/isNumber.validator");
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var SharedModule = (function () {
     function SharedModule() {
     }
@@ -31,8 +29,7 @@ var SharedModule = (function () {
                 isNumber_validator_1.IsNumberValidator,
                 isInRange_validator_1.IsInRangeValidator
             ]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], SharedModule);
     return SharedModule;
 }());

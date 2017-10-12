@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var calculator_service_1 = require('./../../../core/services/calculator.service');
-var core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+var calculator_service_1 = require("./../../../core/services/calculator.service");
+var core_1 = require("@angular/core");
 var LazyComponent = (function () {
     function LazyComponent(myService) {
         this.myService = myService;
@@ -20,8 +21,8 @@ var LazyComponent = (function () {
         core_1.Component({
             selector: 'lazy',
             templateUrl: './lazy.component.html'
-        }), 
-        __metadata('design:paramtypes', [calculator_service_1.CalculatorService])
+        }),
+        __metadata("design:paramtypes", [calculator_service_1.CalculatorService])
     ], LazyComponent);
     return LazyComponent;
 }());
