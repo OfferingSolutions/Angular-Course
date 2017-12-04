@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 import { getInnerHtml } from '../../../helpers/DOM-helpers';
 import { AsyncPipeComponent } from './async-pipe.component';
@@ -27,7 +28,7 @@ describe('AsyncPipeComponent', () => {
 
   it('should correctly visualize the emitted values from the stream', async () => {
     expect(getInnerHtml<AsyncPipeComponent>(fixture, 'span')).toBe('');
-    component.name$ = Observable.of('Fabian');
+    component.name$ = of('Fabian');
     fixture.detectChanges();
     fixture.whenStable().then(() => {
       expect(getInnerHtml<AsyncPipeComponent>(fixture, 'span')).toBe('Fabian');

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { async, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Rx';
+import { Observer } from 'rxjs/Observer';
+import { of } from 'rxjs/observable/of';
 
 import { AsyncService } from './async.service';
 
@@ -61,7 +62,7 @@ describe('AsyncService', () => {
     });
 
     it('should get the name', () => {
-      const spy = spyOn(service, 'getNameASync').and.returnValue(Observable.of('SpyFabian'));
+      const spy = spyOn(service, 'getNameASync').and.returnValue(of('SpyFabian'));
 
       service.getNameASync().subscribe((name: string) => {
         expect(name).toBe('SpyFabian');

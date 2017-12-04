@@ -2,6 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 import { getInnerHtml } from '../../../helpers/DOM-helpers';
 import { CustomHttpService } from '../../services/http-service/http.service';
@@ -39,7 +40,7 @@ describe('WithExternalServiceComponent', () => {
     expect(component.result$).not.toBeDefined();
     expect(getInnerHtml<WithExternalServiceComponent>(fixture, 'pre')).toBe('');
 
-    const spy = spyOn(service, 'getSingle').and.returnValue(Observable.of(responseObject));
+    const spy = spyOn(service, 'getSingle').and.returnValue(of(responseObject));
 
     fixture.detectChanges();
     expect(spy.calls.any()).toBe(true, 'getSingle called');
