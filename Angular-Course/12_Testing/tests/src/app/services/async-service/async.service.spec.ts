@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { async, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
-import { Observer } from 'rxjs/Observer';
 import { of } from 'rxjs/observable/of';
+import { Observer } from 'rxjs/Observer';
 
 import { AsyncService } from './async.service';
 
