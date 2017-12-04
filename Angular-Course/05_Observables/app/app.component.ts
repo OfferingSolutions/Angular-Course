@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Response } from '@angular/http';
-import { Observable, Observer } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
+import { finalize } from 'rxjs/operators';
 
 @Component({
     selector: 'my-app',
@@ -19,7 +20,7 @@ export class AppComponent {
             }, 1000);
 
             setTimeout(() => {
-                observer.next(43);
+                observer.error(new Error());
             }, 2000);
 
             setTimeout(() => {
@@ -28,6 +29,9 @@ export class AppComponent {
         });
 
         let subscription = data
+            .pipe(
+                finalize(() => console.log('finally, if error or not'))
+            )
             // .map(x => <number>x + 1)
             .subscribe((value: number) => {
                 console.log(value);
@@ -39,11 +43,10 @@ export class AppComponent {
 
 
 
-        subscription.unsubscribe();
+        // subscription.unsubscribe();
 
         this.name$ = this.getNameAsync();
     }
-
 
     getNameAsync(): Observable<any> {
         return this.http.get<any>('https://swapi.co/api/people/1/');
