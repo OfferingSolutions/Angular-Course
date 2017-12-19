@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'productDetails',
@@ -23,7 +23,6 @@ export class ProductDetailsComponent implements OnInit {
         //     .queryParams
         //     .map(params => +params['id'] || -1);
 
-        this.id = this.route.paramMap
-            .map(paramMap => +paramMap.get('id') || -1);
+        this.id = this.route.snapshot.queryParamMap.get('id');
     }
 }
