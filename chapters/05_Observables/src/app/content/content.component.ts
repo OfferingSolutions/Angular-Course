@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Observer } from 'rxjs/Observer';
-import { finalize } from 'rxjs/operators';
+import { finalize, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-content',
@@ -29,8 +29,10 @@ export class ContentComponent {
     });
 
     const subscription = data$
-      .pipe(finalize(() => console.log('finally, if error or not')))
-      // .map(x => <number>x + 1)
+      .pipe(
+        // map(x => <number>x + 1),
+        finalize(() => console.log('finally, if error or not'))
+      )
       .subscribe(
         (value: number) => {
           console.log(value);

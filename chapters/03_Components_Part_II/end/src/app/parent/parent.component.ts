@@ -6,17 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-
   public fruitList: string[] = ['Banana', 'Apples', 'Pineapples'];
 
-    constructor() {
+  constructor() {}
 
-    }
+  ngOnInit() {}
 
-    ngOnInit() { }
-
-    public parentAddItem($event: any) {
-        this.fruitList.push($event.name);
-    }
-
+  public parentAddItem($event: any) {
+    this.fruitList.push($event.name);
+  }
 }
