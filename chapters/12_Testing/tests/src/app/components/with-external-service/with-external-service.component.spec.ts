@@ -17,14 +17,15 @@ describe('WithExternalServiceComponent', () => {
     name: 'Luke Skywalker'
   };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserModule, HttpClientTestingModule],
-      declarations: [WithExternalServiceComponent],
-      providers: [CustomHttpService]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        imports: [BrowserModule, HttpClientTestingModule],
+        declarations: [WithExternalServiceComponent],
+        providers: [CustomHttpService]
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WithExternalServiceComponent);
@@ -46,6 +47,8 @@ describe('WithExternalServiceComponent', () => {
     expect(spy.calls.any()).toBe(true, 'getSingle called');
     expect(component.result$).toBeDefined();
 
-    expect(getInnerHtml<WithExternalServiceComponent>(fixture, 'pre')).toBe(responseObject.name);
+    expect(getInnerHtml<WithExternalServiceComponent>(fixture, 'pre')).toBe(
+      responseObject.name
+    );
   });
 });
