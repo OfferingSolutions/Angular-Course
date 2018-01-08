@@ -17,19 +17,18 @@ This repository contains material for getting started with Angular. It should pr
 If you are attending the course you are ready to dive into the following chapters with us
 
 1. [Angular Start](./chapters/00_AngularStart)
-2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
-3. [Directives](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/02_Directives)
-4. [Components Part II](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/03_Components_Part_II)
-5. [Lifecycle](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/04_Lifecycle)
-6. [Observables](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/05_Observables)
-7. [Services](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/06_Services)
-8. [Dependency Injection](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/07_DependencyInjection)
-9. [Pipes](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/08_Pipes)
-10. [Forms](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/09_Forms)
-11. [Routing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/10_Routing)
-12. [Modules](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/11_Modules)
-13. [Testing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/12_Testing)
-14. [Webpack](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/13_Webpack)
+2. [Components Part I](./chapters/01_Components_Part_I)
+3. [Directives](./chapters/02_Directives)
+4. [Components Part II](./chapters/03_Components_Part_II)
+5. [Lifecycle](./chapters/04_Lifecycle)
+6. [Observables](./chapters/05_Observables)
+7. [Services](./chapters/06_Services)
+8. [Dependency Injection](./chapters/07_DependencyInjection)
+9. [Pipes](./chapters/08_Pipes)
+10. [Forms](./chapters/09_Forms)
+11. [Routing](./chapters/10_Routing)
+12. [Modules](./chapters/11_Modules)
+13. [Testing](./chapters/12_Testing)
 
 # Preparation
 
