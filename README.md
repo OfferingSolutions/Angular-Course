@@ -4,7 +4,6 @@
   <img src=".github/oslogo.png" />
 </p>
 
-
 This repository contains material for getting started with Angular. It should provide a code base where you can start on learning or teaching Angular.
 
 [Twitter](https://twitter.com/FabianGosebrink/)
@@ -17,7 +16,7 @@ This repository contains material for getting started with Angular. It should pr
 
 If you are attending the course you are ready to dive into the following chapters with us
 
-1. [Angular Start](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
+1. [Angular Start](./chapters/00_AngularStart)
 2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
 3. [Directives](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/02_Directives)
 4. [Components Part II](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/03_Components_Part_II)
@@ -31,7 +30,6 @@ If you are attending the course you are ready to dive into the following chapter
 12. [Modules](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/11_Modules)
 13. [Testing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/12_Testing)
 14. [Webpack](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/13_Webpack)
-
 
 # Preparation
 
@@ -52,7 +50,7 @@ See the instructions to get started
 
 ## Git
 
-You can get git on [https://git-scm.com/downloads](https://git-scm.com/downloads) and check if you installed git via typing 
+You can get git on [https://git-scm.com/downloads](https://git-scm.com/downloads) and check if you installed git via typing
 
 `git`
 
@@ -80,7 +78,7 @@ on your console.
 
 ## Typescript
 
-You can get Typescript on [https://www.typescriptlang.org/#download-links](https://www.typescriptlang.org/#download-links) or by directly typing 
+You can get Typescript on [https://www.typescriptlang.org/#download-links](https://www.typescriptlang.org/#download-links) or by directly typing
 
 `npm install -g typescript`
 
@@ -100,6 +98,6 @@ Generally you can use every text editor you want to implement Angular applicatio
 
 > Please check the checkboxes highlighted here. It makes your life easier:
 
- ![VSCodeInstall](.github/VSCodeInstall.png "VSCodeInstall")
+![VSCodeInstall](.github/VSCodeInstall.png "VSCodeInstall")
 
 You can download Visual Studio Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
