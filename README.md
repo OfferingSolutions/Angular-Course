@@ -1,7 +1,7 @@
 # [Offering Solutions](https://offering.solutions/) Angular Course (OSAC)
 
 <p align="center">
-  <img src=".github/oslogo.png" />
+  <img src=".github/Academy_logo_black.png" />
 </p>
 
 This repository contains material for getting started with Angular. It should provide a code base where you can start on learning or teaching Angular.
@@ -55,7 +55,7 @@ You can get git on [https://git-scm.com/downloads](https://git-scm.com/downloads
 
 on your commandline. Something like this should appear:
 
-![git](.github/git.png "git")
+![git](.github/git.png 'git')
 
 ## Node with npm
 
@@ -63,13 +63,13 @@ You can get node at [https://nodejs.org/en/download/](https://nodejs.org/en/down
 
 `node -v`
 
-![node](.github/nodeversion.png "node")
+![node](.github/nodeversion.png 'node')
 
 and
 
 `npm -v`
 
-![npm](.github/npmversion.png "npm")
+![npm](.github/npmversion.png 'npm')
 
 on your console.
 
@@ -89,7 +89,7 @@ Please make sure that afterwards you are able to type
 
 on your commandline seeing something like this:
 
-![tsc](.github/tsc.png "tsc")
+![tsc](.github/tsc.png 'tsc')
 
 ## Visual Studio Code
 
@@ -97,6 +97,6 @@ Generally you can use every text editor you want to implement Angular applicatio
 
 > Please check the checkboxes highlighted here. It makes your life easier:
 
-![VSCodeInstall](.github/VSCodeInstall.png "VSCodeInstall")
+![VSCodeInstall](.github/VSCodeInstall.png 'VSCodeInstall')
 
 You can download Visual Studio Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
