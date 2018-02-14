@@ -1,9 +1,8 @@
 # [Offering Solutions](https://offering.solutions/) Angular Course (OSAC)
 
 <p align="center">
-  <img src=".github/oslogo.png" />
+  <img src=".github/Academy_logo_black.png" />
 </p>
-
 
 This repository contains material for getting started with Angular. It should provide a code base where you can start on learning or teaching Angular.
 
@@ -17,21 +16,19 @@ This repository contains material for getting started with Angular. It should pr
 
 If you are attending the course you are ready to dive into the following chapters with us
 
-1. [Angular Start](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/00_AngularStart)
-2. [Components Part I](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/01_Components_Part_I)
-3. [Directives](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/02_Directives)
-4. [Components Part II](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/03_Components_Part_II)
-5. [Lifecycle](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/04_Lifecycle)
-6. [Observables](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/05_Observables)
-7. [Services](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/06_Services)
-8. [Dependency Injection](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/07_DependencyInjection)
-9. [Pipes](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/08_Pipes)
-10. [Forms](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/09_Forms)
-11. [Routing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/10_Routing)
-12. [Modules](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/11_Modules)
-13. [Testing](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/12_Testing)
-14. [Webpack](https://github.com/OfferingSolutions/Offering-Solutions-Angular-Course/tree/master/Angular-Course/13_Webpack)
-
+1. [Angular Start](./chapters/00_AngularStart)
+2. [Components Part I](./chapters/01_Components_Part_I)
+3. [Directives](./chapters/02_Directives)
+4. [Components Part II](./chapters/03_Components_Part_II)
+5. [Lifecycle](./chapters/04_Lifecycle)
+6. [Observables](./chapters/05_Observables)
+7. [Services](./chapters/06_Services)
+8. [Dependency Injection](./chapters/07_DependencyInjection)
+9. [Pipes](./chapters/08_Pipes)
+10. [Forms](./chapters/09_Forms)
+11. [Routing](./chapters/10_Routing)
+12. [Modules](./chapters/11_Modules)
+13. [Testing](./chapters/12_Testing)
 
 # Preparation
 
@@ -52,13 +49,13 @@ See the instructions to get started
 
 ## Git
 
-You can get git on [https://git-scm.com/downloads](https://git-scm.com/downloads) and check if you installed git via typing 
+You can get git on [https://git-scm.com/downloads](https://git-scm.com/downloads) and check if you installed git via typing
 
 `git`
 
 on your commandline. Something like this should appear:
 
-![git](.github/git.png "git")
+![git](.github/git.png 'git')
 
 ## Node with npm
 
@@ -66,13 +63,13 @@ You can get node at [https://nodejs.org/en/download/](https://nodejs.org/en/down
 
 `node -v`
 
-![node](.github/nodeversion.png "node")
+![node](.github/nodeversion.png 'node')
 
 and
 
 `npm -v`
 
-![npm](.github/npmversion.png "npm")
+![npm](.github/npmversion.png 'npm')
 
 on your console.
 
@@ -80,7 +77,7 @@ on your console.
 
 ## Typescript
 
-You can get Typescript on [https://www.typescriptlang.org/#download-links](https://www.typescriptlang.org/#download-links) or by directly typing 
+You can get Typescript on [https://www.typescriptlang.org/#download-links](https://www.typescriptlang.org/#download-links) or by directly typing
 
 `npm install -g typescript`
 
@@ -92,7 +89,7 @@ Please make sure that afterwards you are able to type
 
 on your commandline seeing something like this:
 
-![tsc](.github/tsc.png "tsc")
+![tsc](.github/tsc.png 'tsc')
 
 ## Visual Studio Code
 
@@ -100,6 +97,6 @@ Generally you can use every text editor you want to implement Angular applicatio
 
 > Please check the checkboxes highlighted here. It makes your life easier:
 
- ![VSCodeInstall](.github/VSCodeInstall.png "VSCodeInstall")
+![VSCodeInstall](.github/VSCodeInstall.png 'VSCodeInstall')
 
 You can download Visual Studio Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
