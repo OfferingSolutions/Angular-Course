@@ -17,7 +17,7 @@
       <input type="text" class="form-control" id="calories" placeholder="Calories" [(ngModel)]="currentFood.calories" required
         name="calories">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="AddOrUpdateFoodNoValidation()">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="addOrUpdateFoodWithValidation()">Submit</button>
   </form>
 
 
@@ -52,7 +52,7 @@
         Please enter a valid number (Integer-Range)
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="AddOrUpdateFoodWithValidation()" [disabled]="!f?.valid">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="addOrUpdateFoodWithValidation()" [disabled]="!f?.valid">Submit</button>
   </form>
 
   <!--{{templatereferencvariable.className | json}} <br/> {{f.value | json}}-->
