@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { CustomHttpService } from '../../services/http-service/http.service';
 import { Component, OnInit } from '@angular/core';
 
