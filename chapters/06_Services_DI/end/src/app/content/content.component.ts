@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { CalculatorService } from '../core/calculator/calculator.service';
 import { ItemDataService } from '../core/item-data/item-data.service';
 import { FoodItem } from '../models/foodItem';
