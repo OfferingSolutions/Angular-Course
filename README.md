@@ -36,7 +36,7 @@ See the instructions to get started
 
 ## Things you need to bring to get started with the course
 
-1. Dropbox - Account
+1. Dropbox - Account (not obligatory)
 2. PC / Laptop
 3. Enthusiasm and the will to learn something new :-)
 
@@ -46,6 +46,7 @@ See the instructions to get started
 * [Node & npm](#node-with-npm)
 * [Typescript](#typescript)
 * [Visual Studio Code](#visual-studio-code)
+* [Angular CLI](#angular-cli)
 
 ## Git
 
@@ -73,7 +74,7 @@ and
 
 on your console.
 
-> The versions do not really matter at all but be sure that node version is greater than version 6!
+> The exact versions do not really matter at all but be sure that node version is greater than version 6!
 
 ## Typescript
 
@@ -100,3 +101,11 @@ Generally you can use every text editor you want to implement Angular applicatio
 ![VSCodeInstall](.github/VSCodeInstall.png 'VSCodeInstall')
 
 You can download Visual Studio Code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+## Angular CLI
+
+You can get the Angular CLI at [https://cli.angular.io/](https://cli.angular.io/). After installing it cia `npm` you can check if it is correctly installed by typing
+
+`ng -v` without getting an error.
+
+![angularcli](.github/angularcli.png 'angularcli')
