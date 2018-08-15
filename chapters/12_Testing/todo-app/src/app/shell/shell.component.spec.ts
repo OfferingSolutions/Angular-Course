@@ -1,11 +1,15 @@
-import { exec } from 'child_process';
-import { Todo } from '../models/todo.models';
-import { Observable } from 'rxjs/Rx';
-import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {
+  async,
+  ComponentFixture,
+  fakeAsync,
+  TestBed,
+  tick
+} from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { of } from 'rxjs';
 import { CoreModule } from '../core/core.module';
 import { TodoService } from '../core/todo.service';
+import { Todo } from '../models/todo.models';
 import { TodoFormComponent } from '../todo-form/todo-form.component';
 import { TodoListComponent } from '../todo-list/todo-list.component';
 import { ShellComponent } from './shell.component';
@@ -19,8 +23,7 @@ describe('ShellComponent', () => {
     TestBed.configureTestingModule({
       imports: [CoreModule, ReactiveFormsModule],
       declarations: [ShellComponent, TodoFormComponent, TodoListComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,13 +41,13 @@ describe('ShellComponent', () => {
   });
 
   it('ngOnInit shall call service to get all items', () => {
-    spyOn(service, 'getAllTodos').and.returnValue(Observable.of([]));
+    spyOn(service, 'getAllTodos').and.returnValue(of([]));
     fixture.detectChanges();
     expect(service.getAllTodos).toHaveBeenCalled();
   });
 
   it('addTodo shall call service to get all items', () => {
-    spyOn(service, 'getAllTodos').and.returnValue(Observable.of([]));
+    spyOn(service, 'getAllTodos').and.returnValue(of([]));
     component.addTodo('');
     expect(service.getAllTodos).toHaveBeenCalled();
   });
@@ -55,19 +58,22 @@ describe('ShellComponent', () => {
     expect(service.addTodo).toHaveBeenCalled();
   });
 
-  it('addTodo shall add an item to the service', fakeAsync(() => {
-    let todos: Todo[];
-    service.getAllTodos().subscribe((items: Todo[]) => todos = items);
-    tick(200);
-    expect(todos.length).toBe(0);
+  it(
+    'addTodo shall add an item to the service',
+    fakeAsync(() => {
+      let todos: Todo[];
+      service.getAllTodos().subscribe((items: Todo[]) => (todos = items));
+      tick(200);
+      expect(todos.length).toBe(0);
 
-    component.addTodo('description');
+      component.addTodo('description');
 
-    service.getAllTodos().subscribe((items: Todo[]) => todos = items);
-    tick(200);
-    expect(todos.length).toBe(1);
-    expect(todos[0].description).toBe('description');
-  }));
+      service.getAllTodos().subscribe((items: Todo[]) => (todos = items));
+      tick(200);
+      expect(todos.length).toBe(1);
+      expect(todos[0].description).toBe('description');
+    })
+  );
 
   it('markAsDone shall call service updateTodo', () => {
     spyOn(service, 'updateTodo');
@@ -77,25 +83,27 @@ describe('ShellComponent', () => {
     expect(service.updateTodo).toHaveBeenCalled();
   });
 
-  it('markAsDone shall updateTodo and set \'done\' to \'done\'', fakeAsync(() => {
-    // const todo = new Todo();
-    const addedToDo = service.addTodo('todo');
+  it(
+    'markAsDone shall updateTodo and set done to done',
+    fakeAsync(() => {
+      // const todo = new Todo();
+      const addedToDo = service.addTodo('todo');
 
-    let notDoneTodo: Todo;
-    service.getSingleTodo(addedToDo.id).subscribe((item: Todo) => {
-      notDoneTodo = item;
-    });
-    tick(200);
-    expect(notDoneTodo.done).toBe(false);
+      let notDoneTodo: Todo;
+      service.getSingleTodo(addedToDo.id).subscribe((item: Todo) => {
+        notDoneTodo = item;
+      });
+      tick(200);
+      expect(notDoneTodo.done).toBe(false);
 
-    component.markAsDone(addedToDo);
+      component.markAsDone(addedToDo);
 
-    let doneTodo: Todo;
-    service.getSingleTodo(addedToDo.id).subscribe((item: Todo) => {
-      doneTodo = item;
-    });
-    tick(200);
-    expect(doneTodo.done).toBe(true);
-
-  }));
+      let doneTodo: Todo;
+      service.getSingleTodo(addedToDo.id).subscribe((item: Todo) => {
+        doneTodo = item;
+      });
+      tick(200);
+      expect(doneTodo.done).toBe(true);
+    })
+  );
 });

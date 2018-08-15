@@ -3,7 +3,6 @@ import {
   HttpTestingController
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-
 import { CustomHttpService } from './http.service';
 
 describe('CustomHttpService', () => {
@@ -26,15 +25,16 @@ describe('CustomHttpService', () => {
   });
 
   it('should get the correct star wars character', () => {
+    service.getSingle(1).subscribe((data: any) => {
+      expect(data.name).toBe('Luke Skywalker');
+    });
+
     const req = httpMock.expectOne(
       `http://replace.with.api/anything/1`,
       'call to api'
     );
     expect(req.request.method).toBe('GET');
 
-    service.getSingle(1).subscribe((data: any) => {
-      expect(data.name).toBe('Luke Skywalker');
-    });
     req.flush({
       name: 'Luke Skywalker'
     });

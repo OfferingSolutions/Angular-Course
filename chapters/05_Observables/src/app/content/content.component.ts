@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import { Observer } from 'rxjs/Observer';
-import { finalize, map } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-content',
