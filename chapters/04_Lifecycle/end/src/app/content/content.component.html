@@ -1,8 +1,13 @@
 <main role="main" class="container">
 
-  <div class="starter-template">
-    <h1>Check the console</h1>
-  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Logs</label>
+      <textarea #scrollMe class="form-control" id="exampleFormControlTextarea1" rows="10">{{textAreaValue}}</textarea>
+    </div>
+  </form>
+  <p class="text-right"><button type="button" class="btn btn-primary" (click)="clearConsole()">Clear Console</button></p>
 
 </main>
 <!-- /.container -->

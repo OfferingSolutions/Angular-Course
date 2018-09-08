@@ -1,24 +1,27 @@
 import {
-  Component,
-  OnChanges,
-  OnInit,
-  DoCheck,
-  AfterContentInit,
   AfterContentChecked,
-  AfterViewInit,
+  AfterContentInit,
   AfterViewChecked,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  ElementRef,
+  Input,
+  OnChanges,
   OnDestroy,
+  OnInit,
   SimpleChanges,
-  Input
+  ViewChild,
 } from '@angular/core';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
 })
 export class ContentComponent
-  implements OnChanges,
+  implements
+    OnChanges,
     OnInit,
     DoCheck,
     AfterContentInit,
@@ -26,7 +29,12 @@ export class ContentComponent
     AfterViewInit,
     AfterViewChecked,
     OnDestroy {
-  @Input() textForOnChanges: string;
+  @ViewChild('scrollMe')
+  private scrollTextArea: ElementRef;
+  @Input()
+  textForOnChanges: string;
+
+  textAreaValue = '';
 
   constructor() {}
 
@@ -34,36 +42,60 @@ export class ContentComponent
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges');
     console.log(changes);
+    this.addLine(`OnChanges ${JSON.stringify(changes)}`);
   }
 
   ngOnInit() {
     console.log('OnInit');
+    this.addLine('OnInit');
   }
 
   // ACHTUNG!!!
   ngDoCheck() {
     console.log('DoCheck');
+    // this.addLine('DoCheck');
   }
 
   ngAfterContentInit() {
     console.log('AfterContentInit');
+    // this.addLine('AfterContentInit');
   }
 
   // ACHTUNG!!!
   ngAfterContentChecked() {
     console.log('AfterContentChecked');
+    // this.addLine('AfterContentChecked');
   }
 
   ngAfterViewInit() {
     console.log('AfterViewInit');
+    // this.addLine('AfterViewInit');
   }
 
   // ACHTUNG!!!
   ngAfterViewChecked() {
     console.log('AfterViewChecked');
+    // this.addLine('AfterViewChecked');
   }
 
   ngOnDestroy() {
     console.log('OnDestroy');
+    this.addLine('OnDestroy');
+  }
+
+  clearConsole() {
+    this.textAreaValue = ``;
+  }
+
+  private addLine(message: string) {
+    setTimeout(() => {
+      this.textAreaValue += `${this.getFormattedDate()} - ${message}\r\n`;
+    });
+    this.scrollTextArea.nativeElement.scrollTop = this.scrollTextArea.nativeElement.scrollHeight;
+  }
+
+  private getFormattedDate() {
+    const date = new Date();
+    return `${date.getHours()}:${date.getMinutes()} ${date.getMinutes()} ${date.getSeconds()} ${date.getMilliseconds()}`;
   }
 }
