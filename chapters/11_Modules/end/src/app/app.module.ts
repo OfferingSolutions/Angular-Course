@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LayoutModule } from './layout/layout.module';
-import { CoreModule } from './core/core.module';
-import { PreloadAllModules, RouterModule } from '@angular/router';
 import { AppRoutes } from './app.routing';
+import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { LayoutModule } from './layout/layout.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +18,7 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(AppRoutes),
-    // RouterModule.forRoot(AppRoutes, { preloadingStrategy: PreloadAllModules }),
+    // RouterModule.forRoot(AppRoutes, { preloadingStrategy: PreloadAllModules, useHash: true }),
     HttpClientModule,
     LayoutModule,
     CoreModule,
