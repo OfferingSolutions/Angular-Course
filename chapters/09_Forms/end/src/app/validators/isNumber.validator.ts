@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 import {
-  Validator,
   FormControl,
   NG_VALIDATORS,
-  ValidationErrors
+  ValidationErrors,
+  Validator
 } from '@angular/forms';
 
 @Directive({

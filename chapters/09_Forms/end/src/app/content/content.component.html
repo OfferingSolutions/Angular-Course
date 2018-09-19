@@ -5,7 +5,7 @@
     <p class="lead">Use this document as a way to quickly start any new project.
       <br> All you get is this text and a mostly barebones HTML document.</p>
   </div>
-  <h1>Without validation</h1>
+  <!-- <h1>Without validation</h1>
   <form>
 
     <div class="form-group">
@@ -18,7 +18,7 @@
         required name="calories">
     </div>
     <button type="submit" class="btn btn-primary" (click)="addOrUpdateFoodWithValidation()">Submit</button>
-  </form>
+  </form> -->
 
 
   <h1>With validation</h1>
@@ -37,7 +37,7 @@
     <div class="form-group">
       <label for="calories">Calories</label>
       <input type="text" class="form-control" id="calories" placeholder="Calories" [(ngModel)]="currentFood.calories"
-        required appIsNumber appIsInRange minValue="0" maxValue="6000" name="calories" #calories="ngModel">
+        required appIsNumber appIsInRange name="calories" #calories="ngModel">
 
       <div *ngIf="calories.errors?.required && (calories?.dirty && !f.submitted)" class="alert alert-danger">
         *
