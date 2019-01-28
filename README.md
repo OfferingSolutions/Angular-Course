@@ -106,6 +106,6 @@ You can download Visual Studio Code from [https://code.visualstudio.com/](https:
 
 You can get the Angular CLI at [https://cli.angular.io/](https://cli.angular.io/). After installing it cia `npm` you can check if it is correctly installed by typing
 
-`ng -v` without getting an error.
+`ng version` without getting an error.
 
 ![angularcli](.github/angularcli.png 'angularcli')
