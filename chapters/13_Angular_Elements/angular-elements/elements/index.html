@@ -9,5 +9,11 @@
   <body>
     <web-component name="Fabian"></web-component>
     <script type="text/javascript" src="my-first-web-component.js"></script>
+    <script>
+      var element = document.querySelector('web-component');
+      element.addEventListener('buttonClicked', () => {
+        console.log('buttonClicked');
+      });
+    </script>
   </body>
 </html>
