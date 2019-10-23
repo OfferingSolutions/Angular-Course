@@ -1,0 +1,11 @@
+<main role="main" class="container">
+  {{id}}
+
+  <p>
+    <a [routerLink]="['/withChildren', 12345]">see overview</a>
+    <a [routerLink]="['recipe']">see recipe</a>
+  </p>
+  <hr/>
+  <router-outlet></router-outlet>
+</main>
+<!-- /.container -->

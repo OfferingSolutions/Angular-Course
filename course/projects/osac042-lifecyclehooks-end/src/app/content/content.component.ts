@@ -11,13 +11,13 @@ import {
   OnDestroy,
   OnInit,
   SimpleChanges,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css'],
+  styleUrls: ['./content.component.css']
 })
 export class ContentComponent
   implements
@@ -29,7 +29,7 @@ export class ContentComponent
     AfterViewInit,
     AfterViewChecked,
     OnDestroy {
-  @ViewChild('scrollMe')
+  @ViewChild('scrollMe', { static: true })
   private scrollTextArea: ElementRef;
   @Input()
   textForOnChanges: string;
