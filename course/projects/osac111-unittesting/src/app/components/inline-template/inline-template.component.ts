@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InlineTemplateComponent implements OnInit {
   name: string;
-  constructor() {}
 
   ngOnInit() {
     this.name = 'Fabian';

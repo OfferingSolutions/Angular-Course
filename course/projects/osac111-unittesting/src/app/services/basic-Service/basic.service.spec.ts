@@ -1,11 +1,8 @@
 import { inject, TestBed } from '@angular/core/testing';
-
 import { BasicService } from './basic.service';
 
-describe('BasicService', () => {
-
-  describe('Injecting in every single Test', () => {
-
+describe('Basic Service', () => {
+  describe('inject in every test', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         providers: [BasicService]
@@ -15,26 +12,27 @@ describe('BasicService', () => {
     it('should be created', inject([BasicService], (service: BasicService) => {
       expect(service).toBeTruthy();
     }));
-
   });
 
-  describe('Injecting in a seperate foreach (Suite)', () => {
+  describe('inject in seperate foreach', () => {
     let service: BasicService;
 
-    beforeEach(() => TestBed.configureTestingModule({
-      providers: [BasicService]
-    }));
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        providers: [BasicService]
+      });
+    });
 
-    beforeEach(inject([BasicService], (s: BasicService) => {
+    beforeEach(inject([BasicService], s => {
       service = s;
     }));
 
-    it('should have a service instance', () => {
-      expect(service).toBeDefined();
+    it('should be created', () => {
+      expect(service).toBeTruthy();
     });
   });
 
-  describe('Injecting via TestBed.get()', () => {
+  describe('get via testbed.get', () => {
     let service: BasicService;
 
     beforeEach(() => {
@@ -45,15 +43,12 @@ describe('BasicService', () => {
       service = TestBed.get(BasicService);
     });
 
-    it('should have a service instance', () => {
-      expect(service).toBeDefined();
+    it('should be created', () => {
+      expect(service).toBeTruthy();
     });
-
   });
 
-
-  describe('Testing service functions', () => {
-
+  describe('basicservice functions', () => {
     let service: BasicService;
 
     beforeEach(() => {
@@ -64,14 +59,17 @@ describe('BasicService', () => {
       service = TestBed.get(BasicService);
     });
 
-    it('should add properly: injection method 1', () => {
-      expect(service.add(2, 3)).toBe(5);
+    it('add method adds correct', () => {
+      const result = service.add(1, 3);
+
+      expect(result).toBe(4);
     });
 
-    it('should add properly: (Spy)', () => {
+    it('add method adds correct', () => {
       spyOn(service, 'add').and.returnValue(6);
-      expect(service.add(2, 3)).toBe(6);
+      const result = service.add(1, 3);
+
+      expect(result).toBe(6);
     });
   });
-
 });
