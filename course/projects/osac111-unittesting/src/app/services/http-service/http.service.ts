@@ -26,7 +26,7 @@ export class CustomHttpService {
   }
 
   getlanguages() {
-    return new Observable((observer: Observer<string>) => {
+    return Observable.create((observer: Observer<string>) => {
       setTimeout(() => {
         observer.next(`['en', 'de', 'it']`);
         observer.complete();
