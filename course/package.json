@@ -30,6 +30,7 @@
     "112-start": "ng serve osac112-e2etesting",
     "112-start-cypress-open": "concurrently \"npm run 112-start\" \"cypress open\"",
     "121-start": "ng test osac121-angular-elements",
+    "121-build-elements": "ng build osac121-angular-elements --prod --output-hashing none && node osac121-angular-elements/elements-build.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
