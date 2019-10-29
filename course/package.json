@@ -27,6 +27,7 @@
     "11-start-unit": "ng test osac111-unittesting",
     "11-start-e2e": "ng e2e osac112-e2etesting",
     "112-start-test-ci": "ng test osac111-unittesting --browsers ChromeHeadless --no-watch",
+    "112-start": "ng serve osac112-e2etesting",
     "112-start-cypress-open": "concurrently \"npm run 112-start\" \"cypress open\"",
     "121-start": "ng test osac121-angular-elements",
     "build": "ng build",
@@ -50,7 +51,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
-    "cypress": "^2.1.0",
+    "cypress": "3.5.0",
     "@angular-devkit/build-angular": "~0.803.4",
     "@angular-devkit/build-ng-packagr": "~0.803.13",
     "@angular/cli": "~8.3.4",
