@@ -1,0 +1,14 @@
+<ul class="bg-white rounded-lg shadow divide-y divide-gray-300">
+  @for (item of items; track item.id) {
+  <li class="px-4 py-2 flex items-center">
+    <input
+      type="checkbox"
+      class="mr-2 form-checkbox"
+      (change)="moveToDone(item)"
+      [checked]="item.done"
+    />
+    <span class="flex-grow">{{ item.value }}</span>
+    <button class="text-red-500" (click)="deleteItem(item)">Delete</button>
+  </li>
+  }
+</ul>
