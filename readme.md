@@ -44,9 +44,5 @@ https://sampletodobackend.azurewebsites.net/swagger/index.html
     - 
 ```
 
-
-Bauen eine App --> x, TodoApp
-
-Slides --> Access Tim 
  
 	
