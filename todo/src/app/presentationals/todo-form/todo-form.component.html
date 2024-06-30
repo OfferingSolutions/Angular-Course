@@ -1,0 +1,9 @@
+<mat-form-field class="input-field">
+  <mat-label>Add Todo Item</mat-label>
+  <input matInput [formControl]="todoValueControl" (keydown.enter)="addTodo()" />
+  @if (todoValueControl.value) {
+    <button matSuffix mat-icon-button aria-label="Add" (click)="addTodo()">
+      <mat-icon>add</mat-icon>
+    </button>
+  }
+</mat-form-field>

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {TodoComponent} from "./todo/todo.component";
+import {Component} from '@angular/core';
+import {TodoComponent} from "./containers/todo/todo.component";
 
 @Component({
   selector: 'app-root',
