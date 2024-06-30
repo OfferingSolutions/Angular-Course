@@ -8,5 +8,9 @@ import {Component, input} from '@angular/core';
   styleUrl: './todo-header.component.scss'
 })
 export class TodoHeaderComponent {
-  readonly todoLength = input.required<number>();
+  readonly count = input.required<number>();
+
+  readonly openCount = input.required<number>();
+
+  readonly doneCount = input.required<number>();
 }

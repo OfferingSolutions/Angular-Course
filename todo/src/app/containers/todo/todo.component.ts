@@ -1,5 +1,4 @@
-import {Component, computed, signal} from '@angular/core';
-import {Todo} from "../../models/todo.models";
+import {Component, inject, OnInit} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -7,6 +6,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {TodoHeaderComponent} from "../../presentationals/todo-header/todo-header.component";
 import {TodoFormComponent} from "../../presentationals/todo-form/todo-form.component";
+import {TodoService} from "../../services/todo.service";
+import {TodoListComponent} from "../../presentationals/todo-list/todo-list.component";
+import {Todo} from "../../models/todo.models";
 
 @Component({
   selector: 'app-todo',
@@ -19,23 +21,36 @@ import {TodoFormComponent} from "../../presentationals/todo-form/todo-form.compo
     MatIconModule,
     ReactiveFormsModule,
     TodoHeaderComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    TodoListComponent
   ],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss'
 })
-export class TodoComponent {
-  readonly todos = signal<Todo[]>([]);
+export class TodoComponent implements OnInit {
+  private readonly todoService = inject(TodoService);
 
-  readonly todoLength = computed(() => this.todos().length);
+  readonly sortedTodos = this.todoService.sortedTodos
+
+  readonly count = this.todoService.count;
+
+  readonly openCount = this.todoService.openCount;
+
+  readonly doneCount = this.todoService.doneCount;
+
+  ngOnInit(): void {
+    this.todoService.getAll();
+  }
 
   addTodo(value: string): void {
-    const todo: Todo = {
-      id: '1',
-      value,
-      done: false
-    };
+    this.todoService.add(value);
+  }
 
-    this.todos.update((todos) => [...todos, todo]);
+  updateTodo(todo: Todo): void {
+    this.todoService.update(todo);
+  }
+
+  deleteTodo(id: string): void {
+    this.todoService.delete(id);
   }
 }

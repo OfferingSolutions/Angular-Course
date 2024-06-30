@@ -32,5 +32,6 @@ export class TodoFormComponent {
     }
 
     this.addTodoClicked.emit(this.todoValueControl.value);
+    this.todoValueControl.reset();
   }
 }
