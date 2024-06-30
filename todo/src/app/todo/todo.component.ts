@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, computed, signal} from '@angular/core';
 import {Todo} from "../models/todo.models";
 import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -23,7 +23,9 @@ import {MatButtonModule} from "@angular/material/button";
 export class TodoComponent {
   readonly todoValueControl = new FormControl<string>('');
 
-  readonly todos: Todo[] = [];
+  readonly todos = signal<Todo[]>([]);
+
+  readonly todoLength = computed(() => this.todos().length);
 
   addTodo(): void {
     const todoValue = this.todoValueControl.value;
@@ -38,6 +40,6 @@ export class TodoComponent {
       done: false
     };
 
-    this.todos.push(todo);
+    this.todos().push(todo);
   }
 }
