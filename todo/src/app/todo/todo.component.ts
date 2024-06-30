@@ -21,12 +21,12 @@ import {MatButtonModule} from "@angular/material/button";
   styleUrl: './todo.component.scss'
 })
 export class TodoComponent {
-  readonly todoInput = new FormControl<string>('');
+  readonly todoValueControl = new FormControl<string>('');
 
   readonly todos: Todo[] = [];
 
   addTodo(): void {
-    const todoValue = this.todoInput.value;
+    const todoValue = this.todoValueControl.value;
 
     if (!todoValue) {
       return;
