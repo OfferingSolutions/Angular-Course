@@ -1,0 +1,10 @@
+.detail-form-container {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  align-items: center;
+
+  .form-field {
+    width: 100%;
+  }
+}

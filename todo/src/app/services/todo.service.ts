@@ -1,7 +1,7 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Todo} from "../models/todo.models";
-import {take} from "rxjs";
+import {Observable, take} from "rxjs";
 
 const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 
@@ -61,6 +61,12 @@ export class TodoService {
     this.http.delete(url).subscribe(() => {
       this.todos.update((todos) => [...todos.filter((todo) => todo.id !== id)]);
     });
+  }
+
+  get(id: string): Observable<Todo> {
+    const url = `${BASE_URL}/todos/${id}`;
+
+    return this.http.get<Todo>(url);
   }
 
   private isDone(todo: Todo) {

@@ -1,6 +1,14 @@
-.entry {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+ul {
+  padding: 0;
+
+  .entry {
+    display: flex;
+    min-width: 240px;
+    gap: 5px;
+    align-items: center;
+
+    span {
+      flex: 1;
+    }
+  }
 }

@@ -3,6 +3,7 @@
     <li class="entry">
       <mat-checkbox [checked]="todo.done" (change)="toggleDone(todo)" />
       <span>{{ todo.value | capitalize }}</span>
+      <button mat-button color="primary" [routerLink]="todo.id">Edit</button>
       <button mat-button color="warn" (click)="delete(todo.id)">Delete</button>
     </li>
   }

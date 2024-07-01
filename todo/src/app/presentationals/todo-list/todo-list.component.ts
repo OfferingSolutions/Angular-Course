@@ -3,6 +3,7 @@ import {Todo} from "../../models/todo.models";
 import {MatButton} from "@angular/material/button";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {CapitalizePipe} from "../../pipes/capitalize.pipe";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-todo-list',
@@ -10,7 +11,8 @@ import {CapitalizePipe} from "../../pipes/capitalize.pipe";
   imports: [
     MatButton,
     MatCheckbox,
-    CapitalizePipe
+    CapitalizePipe,
+    RouterLink
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
