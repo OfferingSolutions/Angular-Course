@@ -2,7 +2,7 @@
   @for (todo of todos(); track todo.id) {
     <li class="entry">
       <mat-checkbox [checked]="todo.done" (change)="toggleDone(todo)" />
-      <span>{{ todo.value }}</span>
+      <span>{{ todo.value | capitalize }}</span>
       <button mat-button color="warn" (click)="delete(todo.id)">Delete</button>
     </li>
   }

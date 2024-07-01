@@ -2,13 +2,15 @@ import {Component, input, output} from '@angular/core';
 import {Todo} from "../../models/todo.models";
 import {MatButton} from "@angular/material/button";
 import {MatCheckbox} from "@angular/material/checkbox";
+import {CapitalizePipe} from "../../pipes/capitalize.pipe";
 
 @Component({
   selector: 'app-todo-list',
   standalone: true,
   imports: [
     MatButton,
-    MatCheckbox
+    MatCheckbox,
+    CapitalizePipe
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
