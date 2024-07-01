@@ -29,11 +29,11 @@ export class TodoDetailFormComponent {
 
   readonly form = this.fb.group({
     id: new FormControl({ value: '', disabled: true }),
-    value: new FormControl('', [Validators.required]),
+    todoValue: new FormControl('', [Validators.required]),
   });
 
   save(): void {
-    const value = this.form.controls.value.value;
+    const value = this.form.controls.todoValue.value;
 
     if (!value) {
       return;
@@ -53,6 +53,6 @@ export class TodoDetailFormComponent {
     }
 
     this.form.controls.id.setValue(todo.id);
-    this.form.controls.value.setValue(todo.value)
+    this.form.controls.todoValue.setValue(todo.value)
   }
 }
