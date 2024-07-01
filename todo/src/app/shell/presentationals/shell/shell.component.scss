@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .header {
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    height: 50px;
+    background-color: #D6E3FE;
+    gap: 15px;
+    align-items: center;
+
+    .nav-item {
+      cursor: pointer;
+      color: var(--mdc-text-button-label-text-color);
+
+      &.active, &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow: hidden;
+  }
+}

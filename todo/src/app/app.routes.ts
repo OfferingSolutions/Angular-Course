@@ -1,14 +1,26 @@
 import {Routes} from '@angular/router';
-import {TodoComponent} from "./containers/todo/todo.component";
-import {TodoDetailComponent} from "./containers/todo-detail/todo-detail.component";
+import {ShellComponent} from "./shell";
 
 export const routes: Routes = [
   {
     path: '',
-    component: TodoComponent
-  },
-  {
-    path: ':id',
-    component: TodoDetailComponent
+    component: ShellComponent,
+    children: [
+      {
+        path: 'todos',
+        loadChildren: () =>
+          import('./todo').then((feature) => feature.routes),
+      },
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./about').then((feature) => feature.routes),
+      },
+      {
+        path: '**',
+        pathMatch: 'full',
+        redirectTo: 'todos',
+      },
+    ]
   }
 ];
