@@ -18,7 +18,9 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
-    "paths": {},
+    "paths": {
+      "@todo/about": ["libs/todo/features/about/feature/src/index.ts"]
+    },
     "baseUrl": ".",
     "rootDir": "."
   },

@@ -1,5 +1,5 @@
-import { Routes } from '@angular/router';
-import { ShellComponent } from './shell';
+import {Routes} from '@angular/router';
+import {ShellComponent} from './shell';
 
 export const routes: Routes = [
   {
@@ -12,7 +12,7 @@ export const routes: Routes = [
       },
       {
         path: 'about',
-        loadChildren: () => import('./about').then((feature) => feature.routes),
+        loadChildren: () => import('@todo/about').then((feature) => feature.routes),
       },
       {
         path: '**',
