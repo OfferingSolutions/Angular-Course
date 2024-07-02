@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "nx serve",
+    "build": "nx build",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test"
   },
   "private": true,
   "dependencies": {
@@ -26,8 +26,17 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.6",
+    "@angular-devkit/core": "^18.0.6",
+    "@angular-devkit/schematics": "^18.0.6",
     "@angular/cli": "^18.0.6",
     "@angular/compiler-cli": "^18.0.0",
+    "@nx/angular": "19.3.2",
+    "@nx/js": "19.3.2",
+    "@nx/workspace": "19.3.2",
+    "@schematics/angular": "^18.0.6",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -35,6 +44,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nx": "19.3.2",
+    "prettier": "^2.6.2",
     "typescript": "~5.4.2"
   }
 }

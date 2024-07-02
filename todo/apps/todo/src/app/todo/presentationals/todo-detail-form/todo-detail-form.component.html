@@ -1,0 +1,16 @@
+<div class="detail-form-container">
+  <form class="form" [formGroup]="form">
+    <mat-form-field class="form-field">
+      <mat-label>Id</mat-label>
+      <input matInput formControlName="id" />
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Value</mat-label>
+      <input matInput formControlName="todoValue" />
+    </mat-form-field>
+  </form>
+  <button mat-button color="primary" [disabled]="!form.valid" (click)="save()">
+    Save
+  </button>
+</div>

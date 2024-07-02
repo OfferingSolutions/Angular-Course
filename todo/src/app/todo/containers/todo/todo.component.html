@@ -1,5 +1,0 @@
-<div class="container">
-  <app-todo-header [count]="count()" [openCount]="openCount()" [doneCount]="doneCount()" />
-  <app-todo-form (addTodoClicked)="addTodo($event)" />
-  <app-todo-list [todos]="sortedTodos()" (doneToggled)="updateTodo($event)" (deleteClicked)="deleteTodo($event)" />
-</div>

@@ -1,0 +1,9 @@
+<div class="detail-container">
+  <h2>Todo Detail</h2>
+
+  @if (todo(); as todo) {
+  <app-todo-detail-form [todo]="todo" (saved)="save($event)" />
+  } @else {
+  <mat-spinner diameter="50" />
+  }
+</div>
