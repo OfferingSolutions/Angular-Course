@@ -1,11 +1,12 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, inject, OnInit, signal} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {TodoFormComponent, TodoHeaderComponent, TodoListComponent} from "@todo/todo-ui";
-import {Todo, TodoService} from "@todo/todo-domain";
+import {Todo} from "@todo/todo-domain";
+import {TodoStore} from "../../../../../domain/src/lib/state/todo.store";
 
 @Component({
   selector: 'app-todo',
@@ -23,31 +24,32 @@ import {Todo, TodoService} from "@todo/todo-domain";
   ],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
+  providers: [TodoStore]
 })
 export class TodoComponent implements OnInit {
-  private readonly todoService = inject(TodoService);
+  private readonly todoStore = inject(TodoStore);
 
-  readonly sortedTodos = this.todoService.sortedTodos;
+  readonly sortedTodos = this.todoStore.todos;
 
-  readonly count = this.todoService.count;
+  readonly count = signal(0);
 
-  readonly openCount = this.todoService.openCount;
+  readonly openCount = signal(0);
 
-  readonly doneCount = this.todoService.doneCount;
+  readonly doneCount = signal(0);
 
   ngOnInit(): void {
-    this.todoService.getAll();
+    // this.todoService.getAll();
   }
 
   addTodo(value: string): void {
-    this.todoService.add(value);
+    // this.todoService.add(value);
   }
 
   updateTodo(todo: Todo): void {
-    this.todoService.update(todo);
+    // this.todoService.update(todo);
   }
 
   deleteTodo(id: string): void {
-    this.todoService.delete(id);
+    // this.todoService.delete(id);
   }
 }
