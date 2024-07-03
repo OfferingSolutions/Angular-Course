@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -35,11 +35,11 @@ export class TodoComponent implements OnInit {
 
   readonly sortedTodos = this.todoStore.todos;
 
-  readonly count = signal(0);
+  readonly count = this.todoStore.count;
 
-  readonly openCount = signal(0);
+  readonly openCount = this.todoStore.openCount;
 
-  readonly doneCount = signal(0);
+  readonly doneCount = this.todoStore.doneCount;
 
   ngOnInit(): void {
     this.todoStore.loadAll();

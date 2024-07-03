@@ -1,6 +1,12 @@
 import { Todo, TodoService } from '@todo/todo-domain';
-import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { inject } from '@angular/core';
+import {
+  patchState,
+  signalStore,
+  withComputed,
+  withMethods,
+  withState,
+} from '@ngrx/signals';
+import { computed, inject } from '@angular/core';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { pipe, switchMap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
@@ -15,6 +21,12 @@ export const initialTodoState: TodoState = {
 
 export const TodoStore = signalStore(
   withState(initialTodoState),
+  withComputed(({ todos }) => ({
+    count: computed(() => todos().length),
+    doneCount: computed(() => todos().filter((todo) => todo.done).length),
+    openCount: computed(() => todos().filter((todo) => !todo.done).length),
+    sortedTodos: computed(() => todos().sort((b, a) => +b.done - +a.done)),
+  })),
   withMethods((todoStore, todoService = inject(TodoService)) => ({
     loadAll: rxMethod<void>(
       pipe(
