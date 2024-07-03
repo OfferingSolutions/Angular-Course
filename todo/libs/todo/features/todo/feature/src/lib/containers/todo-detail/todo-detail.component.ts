@@ -1,9 +1,8 @@
-import {Component, inject, input} from '@angular/core';
-import {toObservable, toSignal} from '@angular/core/rxjs-interop';
-import {switchMap} from 'rxjs';
-import {MatProgressSpinner} from '@angular/material/progress-spinner';
-import {TodoDetailFormComponent} from "@todo/todo-ui";
-import {Todo, TodoService} from "@todo/todo-domain";
+import { Component, effect, inject, input } from '@angular/core';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { TodoDetailFormComponent } from '@todo/todo-ui';
+import { Todo } from '@todo/todo-domain';
+import { TodoStore } from '../../../../../domain/src/lib/state/todo.store';
 
 @Component({
   selector: 'app-todo-detail',
@@ -13,15 +12,17 @@ import {Todo, TodoService} from "@todo/todo-domain";
   styleUrl: './todo-detail.component.scss',
 })
 export class TodoDetailComponent {
-  private readonly todoService = inject(TodoService);
+  private readonly todoStore = inject(TodoStore);
 
   readonly id = input.required<string>();
 
-  readonly todo = toSignal(
-    toObservable(this.id).pipe(switchMap((id) => this.todoService.get(id)))
+  readonly todo = this.todoStore.current;
+
+  private readonly _loadCurrentTodo = effect(() =>
+    this.todoStore.get(this.id())
   );
 
   save(todo: Todo): void {
-    this.todoService.update(todo);
+    this.todoStore.update(todo);
   }
 }

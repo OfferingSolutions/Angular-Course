@@ -5,10 +5,12 @@ import { withTodoMethods } from './todo.methods';
 
 export interface TodoState {
   todos: Todo[];
+  current: Todo | null;
 }
 
 export const initialTodoState: TodoState = {
   todos: [],
+  current: null,
 };
 
 export const TodoStore = signalStore(

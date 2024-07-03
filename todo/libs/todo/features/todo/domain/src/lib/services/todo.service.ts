@@ -1,7 +1,7 @@
-import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Todo} from '../models/todo.models';
-import {Observable} from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Todo } from '../models/todo.models';
+import { Observable } from 'rxjs';
 
 const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 
@@ -14,7 +14,7 @@ export class TodoService {
   getAll(): Observable<Todo[]> {
     const url = `${BASE_URL}/todos`;
 
-    return this.http.get<Todo[]>(url)
+    return this.http.get<Todo[]>(url);
   }
 
   add(value: string): Observable<Todo> {
@@ -39,22 +39,5 @@ export class TodoService {
     const url = `${BASE_URL}/todos/${id}`;
 
     return this.http.get<Todo>(url);
-  }
-
-  private isDone(todo: Todo) {
-    return todo.done;
-  }
-
-  private moveToEnd(todos: Todo[], updatedTodo: Todo) {
-    const allOtherTodos = todos.filter((todo) => todo.id !== updatedTodo.id);
-
-    return [...allOtherTodos, updatedTodo];
-  }
-
-  private replaceOnIndex(todos: Todo[], updatedTodo: Todo) {
-    const index = todos.findIndex((todo) => todo.id === updatedTodo.id);
-    todos[index] = updatedTodo;
-
-    return [...todos];
   }
 }

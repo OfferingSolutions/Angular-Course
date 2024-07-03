@@ -95,6 +95,17 @@ export function withTodoMethods() {
           )
         )
       ),
+
+      get: rxMethod<string>(
+        switchMap((id) =>
+          todoService.get(id).pipe(
+            tapResponse({
+              next: (todo) => patchState(todoStore, { current: todo }),
+              error: () => console.log('Error Getting Todo'),
+            })
+          )
+        )
+      ),
     }))
   );
 }

@@ -28,7 +28,6 @@ import { TodoStore } from '../../../../../domain/src/lib/state/todo.store';
   ],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
-  providers: [TodoStore],
 })
 export class TodoComponent {
   private readonly todoStore = inject(TodoStore);
