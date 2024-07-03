@@ -13,8 +13,40 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "scope:todo-app",
+                "onlyDependOnLibsWithTags": [
+                  "scope:todo",
+                  "scope:about"
+                ]
+              },
+              {
+                "sourceTag": "scope:todo",
+                "onlyDependOnLibsWithTags": ["scope:todo"]
+              },
+              {
+                "sourceTag": "scope:about",
+                "onlyDependOnLibsWithTags": ["scope:about"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:feature"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:domain",
+                  "type:ui"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": [
+                  "type:domain"
+                ]
+              },
+              {
+                "sourceTag": "type:domain",
+                "onlyDependOnLibsWithTags": []
               }
             ]
           }

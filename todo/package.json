@@ -6,7 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
-    "test": "nx test"
+    "test": "nx test",
+    "lint": "nx run-many --all --parallel --target=lint"
   },
   "private": true,
   "dependencies": {

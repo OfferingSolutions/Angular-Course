@@ -7,6 +7,7 @@
       "style": "scss"
     }
   },
+  "tags": ["scope:todo-app", "type:app"],
   "sourceRoot": "apps/todo/src",
   "prefix": "app",
   "targets": {

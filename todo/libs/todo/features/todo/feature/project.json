@@ -2,9 +2,9 @@
   "name": "todo-feature",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/todo/features/todo/feature/src",
-  "prefix": "lib",
+  "prefix": "app",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:todo", "type:feature"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

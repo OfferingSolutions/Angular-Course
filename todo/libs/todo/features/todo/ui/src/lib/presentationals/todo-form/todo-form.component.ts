@@ -1,13 +1,9 @@
-import { Component, output } from '@angular/core';
-import {
-  MatFormField,
-  MatLabel,
-  MatSuffix,
-} from '@angular/material/form-field';
-import { MatIcon } from '@angular/material/icon';
-import { MatIconButton } from '@angular/material/button';
-import { MatInput } from '@angular/material/input';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import {Component, output} from '@angular/core';
+import {MatFormField, MatLabel, MatSuffix,} from '@angular/material/form-field';
+import {MatIcon} from '@angular/material/icon';
+import {MatIconButton} from '@angular/material/button';
+import {MatInput} from '@angular/material/input';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-todo-form',

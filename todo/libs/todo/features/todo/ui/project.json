@@ -2,9 +2,9 @@
   "name": "todo-ui",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/todo/features/todo/ui/src",
-  "prefix": "lib",
+  "prefix": "app",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:todo", "type:ui"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

@@ -2,9 +2,9 @@
   "name": "todo-domain",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/todo/features/todo/domain/src",
-  "prefix": "lib",
+  "prefix": "app",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:todo", "type:domain"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
