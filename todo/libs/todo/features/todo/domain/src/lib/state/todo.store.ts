@@ -3,6 +3,7 @@ import {
   patchState,
   signalStore,
   withComputed,
+  withHooks,
   withMethods,
   withState,
 } from '@ngrx/signals';
@@ -100,5 +101,10 @@ export const TodoStore = signalStore(
         )
       )
     ),
-  }))
+  })),
+  withHooks({
+    onInit({ loadAll }) {
+      loadAll();
+    },
+  })
 );
