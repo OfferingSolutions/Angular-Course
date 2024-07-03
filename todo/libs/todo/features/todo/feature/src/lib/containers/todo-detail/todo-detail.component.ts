@@ -1,10 +1,9 @@
-import { Component, inject, input } from '@angular/core';
-import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { switchMap } from 'rxjs';
-import { TodoService } from '../../services/todo.service';
-import { TodoDetailFormComponent } from '../../presentationals/todo-detail-form/todo-detail-form.component';
-import { MatProgressSpinner } from '@angular/material/progress-spinner';
-import { Todo } from '../../models/todo.models';
+import {Component, inject, input} from '@angular/core';
+import {toObservable, toSignal} from '@angular/core/rxjs-interop';
+import {switchMap} from 'rxjs';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {TodoDetailFormComponent} from "@todo/todo-ui";
+import {Todo, TodoService} from "@todo/todo-domain";
 
 @Component({
   selector: 'app-todo-detail',

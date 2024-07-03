@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {ShellComponent} from './shell';
+import {ShellComponent} from './presentationals/shell/shell.component';
 
 export const routes: Routes = [
   {
@@ -8,11 +8,11 @@ export const routes: Routes = [
     children: [
       {
         path: 'todos',
-        loadChildren: () => import('./todo').then((feature) => feature.routes),
+        loadChildren: () => import('@todo/todo-feature').then((feature) => feature.routes),
       },
       {
         path: 'about',
-        loadChildren: () => import('@todo/about').then((feature) => feature.routes),
+        loadChildren: () => import('@todo/about-feature').then((feature) => feature.routes),
       },
       {
         path: '**',

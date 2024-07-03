@@ -19,7 +19,10 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@todo/about": ["libs/todo/features/about/feature/src/index.ts"]
+      "@todo/about-feature": ["libs/todo/features/about/feature/src/index.ts"],
+      "@todo/todo-domain": ["libs/todo/features/todo/domain/src/index.ts"],
+      "@todo/todo-feature": ["libs/todo/features/todo/feature/src/index.ts"],
+      "@todo/todo-ui": ["libs/todo/features/todo/ui/src/index.ts"]
     },
     "baseUrl": ".",
     "rootDir": "."

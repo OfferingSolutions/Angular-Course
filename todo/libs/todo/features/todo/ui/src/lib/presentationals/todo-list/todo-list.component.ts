@@ -1,9 +1,9 @@
-import { Component, input, output } from '@angular/core';
-import { Todo } from '../../models/todo.models';
-import { MatButton } from '@angular/material/button';
-import { MatCheckbox } from '@angular/material/checkbox';
-import { CapitalizePipe } from '../../pipes/capitalize.pipe';
-import { RouterLink } from '@angular/router';
+import {Component, input, output} from '@angular/core';
+import {MatButton} from '@angular/material/button';
+import {MatCheckbox} from '@angular/material/checkbox';
+import {CapitalizePipe} from '../../pipes/capitalize.pipe';
+import {RouterLink} from '@angular/router';
+import {Todo} from "@todo/todo-domain";
 
 @Component({
   selector: 'app-todo-list',

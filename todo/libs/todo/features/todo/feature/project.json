@@ -1,7 +1,7 @@
 {
-  "name": "about-feature",
+  "name": "todo-feature",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/todo/features/about/feature/src",
+  "sourceRoot": "libs/todo/features/todo/feature/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/todo/features/about/feature/jest.config.ts"
+        "jestConfig": "libs/todo/features/todo/feature/jest.config.ts"
       }
     },
     "lint": {

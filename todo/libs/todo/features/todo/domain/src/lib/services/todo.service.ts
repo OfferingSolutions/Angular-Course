@@ -1,7 +1,7 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Todo } from '../models/todo.models';
-import { Observable, take } from 'rxjs';
+import {computed, inject, Injectable, signal} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Todo} from '../models/todo.models';
+import {Observable, take} from 'rxjs';
 
 const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 
