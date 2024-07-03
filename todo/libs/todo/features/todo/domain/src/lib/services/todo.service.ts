@@ -1,7 +1,7 @@
-import {computed, inject, Injectable, signal} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Todo} from '../models/todo.models';
-import {Observable, take} from 'rxjs';
+import {Observable} from 'rxjs';
 
 const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 
@@ -11,63 +11,28 @@ const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 export class TodoService {
   private readonly http = inject(HttpClient);
 
-  private readonly todos = signal<Todo[]>([]);
-
-  readonly count = computed(() => {
-    return this.todos().length;
-  });
-
-  readonly doneCount = computed(
-    () => this.todos().filter((item) => item.done).length
-  );
-
-  readonly openCount = computed(
-    () => this.todos().filter((item) => !item.done).length
-  );
-
-  readonly sortedTodos = computed(() =>
-    this.todos().sort((b, a) => +b.done - +a.done)
-  );
-
-  getAll() {
+  getAll(): Observable<Todo[]> {
     const url = `${BASE_URL}/todos`;
 
-    this.http
-      .get<Todo[]>(url)
-      .pipe(take(1))
-      .subscribe((todos) => {
-        this.todos.set(todos);
-      });
+    return this.http.get<Todo[]>(url)
   }
 
-  add(value: string) {
+  add(value: string): Observable<Todo> {
     const url = `${BASE_URL}/todos`;
 
-    this.http.post<Todo>(url, { value }).subscribe((addedTodo) => {
-      this.todos.update((items) => [addedTodo, ...items]);
-    });
+    return this.http.post<Todo>(url, { value });
   }
 
-  update(todo: Todo) {
+  update(todo: Todo): Observable<Todo> {
     const url = `${BASE_URL}/todos/${todo.id}`;
 
-    this.http.put<Todo>(url, todo).subscribe((updatedTodo) => {
-      this.todos.update((items) => {
-        if (this.isDone(updatedTodo)) {
-          return this.moveToEnd(items, updatedTodo);
-        }
-
-        return this.replaceOnIndex(items, updatedTodo);
-      });
-    });
+    return this.http.put<Todo>(url, todo);
   }
 
-  delete(id: string) {
+  delete(id: string): Observable<void> {
     const url = `${BASE_URL}/todos/${id}`;
 
-    this.http.delete(url).subscribe(() => {
-      this.todos.update((todos) => [...todos.filter((todo) => todo.id !== id)]);
-    });
+    return this.http.delete<void>(url);
   }
 
   get(id: string): Observable<Todo> {

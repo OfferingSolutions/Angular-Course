@@ -1,12 +1,16 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {TodoFormComponent, TodoHeaderComponent, TodoListComponent} from "@todo/todo-ui";
-import {Todo} from "@todo/todo-domain";
-import {TodoStore} from "../../../../../domain/src/lib/state/todo.store";
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {
+  TodoFormComponent,
+  TodoHeaderComponent,
+  TodoListComponent,
+} from '@todo/todo-ui';
+import { Todo } from '@todo/todo-domain';
+import { TodoStore } from '../../../../../domain/src/lib/state/todo.store';
 
 @Component({
   selector: 'app-todo',
@@ -24,7 +28,7 @@ import {TodoStore} from "../../../../../domain/src/lib/state/todo.store";
   ],
   templateUrl: './todo.component.html',
   styleUrl: './todo.component.scss',
-  providers: [TodoStore]
+  providers: [TodoStore],
 })
 export class TodoComponent implements OnInit {
   private readonly todoStore = inject(TodoStore);
@@ -38,18 +42,18 @@ export class TodoComponent implements OnInit {
   readonly doneCount = signal(0);
 
   ngOnInit(): void {
-    // this.todoService.getAll();
+    this.todoStore.loadAll();
   }
 
   addTodo(value: string): void {
-    // this.todoService.add(value);
+    this.todoStore.add(value);
   }
 
   updateTodo(todo: Todo): void {
-    // this.todoService.update(todo);
+    this.todoStore.update(todo);
   }
 
   deleteTodo(id: string): void {
-    // this.todoService.delete(id);
+    this.todoStore.delete(id);
   }
 }
