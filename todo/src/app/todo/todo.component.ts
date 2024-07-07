@@ -40,6 +40,6 @@ export class TodoComponent {
       done: false
     };
 
-    this.todos().push(todo);
+    this.todos.update((todos) => [...todos, todo]);
   }
 }
