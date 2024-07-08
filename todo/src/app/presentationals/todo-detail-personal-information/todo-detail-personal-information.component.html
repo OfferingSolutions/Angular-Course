@@ -1,0 +1,21 @@
+<form class="form" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age" type="number" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Passport ID</mat-label>
+    <input matInput formControlName="passportId" />
+    @if (form.controls.passportId.errors?.['passportIdRequired']) {
+      <mat-error>Passport ID Required for adults.</mat-error>
+    }
+  </mat-form-field>
+</form>

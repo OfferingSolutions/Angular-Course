@@ -5,11 +5,14 @@ import {TodoService} from "../../services/todo.service";
 import {TodoDetailFormComponent} from "../../presentationals/todo-detail-form/todo-detail-form.component";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
 import {Todo} from "../../models/todo.models";
+import {
+  TodoDetailPersonalInformationComponent
+} from "../../presentationals/todo-detail-personal-information/todo-detail-personal-information.component";
 
 @Component({
   selector: 'app-todo-detail',
   standalone: true,
-  imports: [TodoDetailFormComponent, MatProgressSpinner],
+  imports: [TodoDetailFormComponent, MatProgressSpinner, TodoDetailPersonalInformationComponent],
   templateUrl: './todo-detail.component.html',
   styleUrl: './todo-detail.component.scss'
 })
