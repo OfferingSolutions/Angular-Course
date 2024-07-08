@@ -23,6 +23,6 @@ export const passportValidator: ValidatorFn = (
   }
 
   passportId.setErrors(null);
-  
+
   return null;
 };
