@@ -1,5 +1,5 @@
 import {Component, effect, inject, input, output} from '@angular/core';
-import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {Todo} from "../../models/todo.models";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
@@ -28,8 +28,8 @@ export class TodoDetailFormComponent {
   private readonly _setFormValues = effect(() => this.setFormValues(this.todo()));
 
   readonly form = this.fb.group({
-    id: new FormControl({ value: '', disabled: true }),
-    todoValue: new FormControl('', [Validators.required]),
+    id: { value: '', disabled: true },
+    todoValue: ['', [Validators.required]]
   });
 
   save(): void {
