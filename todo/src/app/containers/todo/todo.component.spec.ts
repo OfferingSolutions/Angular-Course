@@ -12,6 +12,7 @@ import {signal} from "@angular/core";
 describe('TodoComponent', () => {
   let component: TodoComponent;
   let fixture: ComponentFixture<TodoComponent>;
+  let todoService: TodoService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -32,6 +33,8 @@ describe('TodoComponent', () => {
       })
     .compileComponents();
 
+    todoService = TestBed.inject(TodoService);
+
     fixture = TestBed.createComponent(TodoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -40,4 +43,17 @@ describe('TodoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('ngOnInit', () => {
+    it('should call todoService "getAll"', () => {
+      // arrange
+      const getAllSpy = spyOn(todoService, 'getAll');
+
+      // act
+      component.ngOnInit();
+
+      // assert
+      expect(getAllSpy).toHaveBeenCalled();
+    })
+  })
 });
