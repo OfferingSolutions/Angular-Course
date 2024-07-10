@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TodoListComponent } from './todo-list.component';
+import {TodoListComponent} from './todo-list.component';
 
 describe('TodoListComponent', () => {
   let component: TodoListComponent;
@@ -13,6 +13,8 @@ describe('TodoListComponent', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(TodoListComponent);
+    fixture.componentRef.setInput('todos', []);
+
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
