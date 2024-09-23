@@ -1,0 +1,7 @@
+<ul class="list">
+  @for (todo of todos(); track todo.id) {
+    <li class="entry">
+      <span>{{ todo.value }}</span>
+    </li>
+  }
+</ul>

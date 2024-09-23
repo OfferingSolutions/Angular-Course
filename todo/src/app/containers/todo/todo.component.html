@@ -1,4 +1,5 @@
 <div class="container">
-  <app-todo-header [todoLength]="todoLength()" />
-  <app-todo-form (addTodoClicked)="addTodo($event)" />
+  <app-todo-header [todoLength]="todoLength()"/>
+  <app-todo-form (addTodoClicked)="addTodo($event)"/>
+  <app-todo-list [todos]="todos()"/>
 </div>
