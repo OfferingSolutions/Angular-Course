@@ -8,11 +8,11 @@ describe('TodoHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TodoHeaderComponent]
-    })
-    .compileComponents();
+      imports: [TodoHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoHeaderComponent);
+    fixture.componentRef.setInput('todoLength', 0);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoFormComponent } from './todo-form.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TodoFormComponent', () => {
   let component: TodoFormComponent;
@@ -8,9 +9,8 @@ describe('TodoFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TodoFormComponent]
-    })
-    .compileComponents();
+      imports: [TodoFormComponent, NoopAnimationsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoFormComponent);
     component = fixture.componentInstance;
