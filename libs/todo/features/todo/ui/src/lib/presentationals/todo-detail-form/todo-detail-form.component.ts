@@ -6,11 +6,10 @@ import {MatButton} from '@angular/material/button';
 import {Todo} from "@todo/todo-domain";
 
 @Component({
-  selector: 'app-todo-detail-form',
-  standalone: true,
-  imports: [MatFormField, MatInput, MatLabel, ReactiveFormsModule, MatButton],
-  templateUrl: './todo-detail-form.component.html',
-  styleUrl: './todo-detail-form.component.scss',
+    selector: 'app-todo-detail-form',
+    imports: [MatFormField, MatInput, MatLabel, ReactiveFormsModule, MatButton],
+    templateUrl: './todo-detail-form.component.html',
+    styleUrl: './todo-detail-form.component.scss'
 })
 export class TodoDetailFormComponent {
   private readonly fb = inject(FormBuilder);
