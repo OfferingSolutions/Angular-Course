@@ -5,17 +5,16 @@ import {MatInput} from "@angular/material/input";
 import {passportValidator} from "./passport.validator";
 
 @Component({
-  selector: 'app-todo-detail-personal-information',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatFormField,
-    MatInput,
-    MatLabel,
-    MatError
-  ],
-  templateUrl: './todo-detail-personal-information.component.html',
-  styleUrl: './todo-detail-personal-information.component.scss'
+    selector: 'app-todo-detail-personal-information',
+    imports: [
+        ReactiveFormsModule,
+        MatFormField,
+        MatInput,
+        MatLabel,
+        MatError
+    ],
+    templateUrl: './todo-detail-personal-information.component.html',
+    styleUrl: './todo-detail-personal-information.component.scss'
 })
 export class TodoDetailPersonalInformationComponent {
   private readonly fb = inject(FormBuilder);

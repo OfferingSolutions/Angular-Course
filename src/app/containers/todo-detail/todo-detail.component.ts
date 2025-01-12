@@ -10,11 +10,10 @@ import {
 } from "../../presentationals/todo-detail-personal-information/todo-detail-personal-information.component";
 
 @Component({
-  selector: 'app-todo-detail',
-  standalone: true,
-  imports: [TodoDetailFormComponent, MatProgressSpinner, TodoDetailPersonalInformationComponent],
-  templateUrl: './todo-detail.component.html',
-  styleUrl: './todo-detail.component.scss'
+    selector: 'app-todo-detail',
+    imports: [TodoDetailFormComponent, MatProgressSpinner, TodoDetailPersonalInformationComponent],
+    templateUrl: './todo-detail.component.html',
+    styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent {
   private readonly todoService = inject(TodoService);
