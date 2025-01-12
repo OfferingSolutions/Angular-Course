@@ -4,14 +4,13 @@ import {MatButton} from "@angular/material/button";
 import {MatCheckbox} from "@angular/material/checkbox";
 
 @Component({
-  selector: 'app-todo-list',
-  standalone: true,
-  imports: [
-    MatButton,
-    MatCheckbox
-  ],
-  templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.scss'
+    selector: 'app-todo-list',
+    imports: [
+        MatButton,
+        MatCheckbox
+    ],
+    templateUrl: './todo-list.component.html',
+    styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
   todos = input.required<Todo[]>();
