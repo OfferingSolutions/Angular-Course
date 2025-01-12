@@ -8,21 +8,20 @@ import {TodoFormComponent, TodoHeaderComponent, TodoListComponent} from "@todo/t
 import {Todo, TodoService} from "@todo/todo-domain";
 
 @Component({
-  selector: 'app-todo',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    TodoHeaderComponent,
-    TodoFormComponent,
-    TodoListComponent,
-  ],
-  templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss',
+    selector: 'app-todo',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        TodoHeaderComponent,
+        TodoFormComponent,
+        TodoListComponent,
+    ],
+    templateUrl: './todo.component.html',
+    styleUrl: './todo.component.scss'
 })
 export class TodoComponent implements OnInit {
   private readonly todoService = inject(TodoService);
