@@ -10,21 +10,20 @@ import {TodoFormComponent} from "../../presentationals/todo-form/todo-form.compo
 import { TodoListComponent } from "../../presentationals/todo-list/todo-list.component";
 
 @Component({
-  selector: 'app-todo',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    TodoHeaderComponent,
-    TodoFormComponent,
-    TodoListComponent,
-  ],
-  templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss',
+    selector: 'app-todo',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        TodoHeaderComponent,
+        TodoFormComponent,
+        TodoListComponent,
+    ],
+    templateUrl: './todo.component.html',
+    styleUrl: './todo.component.scss'
 })
 export class TodoComponent {
   readonly todos = signal<Todo[]>([]);
