@@ -21,5 +21,6 @@
       "cache": true
     }
   },
-  "defaultProject": "todo"
+  "defaultProject": "todo",
+  "useLegacyCache": true
 }

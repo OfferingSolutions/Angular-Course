@@ -10,19 +10,18 @@ import { MatInput } from '@angular/material/input';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-todo-form',
-  standalone: true,
-  imports: [
-    MatFormField,
-    MatIcon,
-    MatIconButton,
-    MatInput,
-    MatLabel,
-    MatSuffix,
-    ReactiveFormsModule,
-  ],
-  templateUrl: './todo-form.component.html',
-  styleUrl: './todo-form.component.scss',
+    selector: 'app-todo-form',
+    imports: [
+        MatFormField,
+        MatIcon,
+        MatIconButton,
+        MatInput,
+        MatLabel,
+        MatSuffix,
+        ReactiveFormsModule,
+    ],
+    templateUrl: './todo-form.component.html',
+    styleUrl: './todo-form.component.scss'
 })
 export class TodoFormComponent {
   readonly addTodoClicked = output<string>();

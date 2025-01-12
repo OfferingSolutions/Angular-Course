@@ -7,11 +7,10 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { Todo } from '../../models/todo.models';
 
 @Component({
-  selector: 'app-todo-detail',
-  standalone: true,
-  imports: [TodoDetailFormComponent, MatProgressSpinner],
-  templateUrl: './todo-detail.component.html',
-  styleUrl: './todo-detail.component.scss',
+    selector: 'app-todo-detail',
+    imports: [TodoDetailFormComponent, MatProgressSpinner],
+    templateUrl: './todo-detail.component.html',
+    styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent {
   private readonly todoService = inject(TodoService);
