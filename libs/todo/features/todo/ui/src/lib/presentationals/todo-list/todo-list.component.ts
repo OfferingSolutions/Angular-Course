@@ -19,8 +19,12 @@ export class TodoListComponent {
   deleteClicked = output<string>();
 
   toggleDone(todo: Todo) {
-    todo.done = !todo.done;
-    this.doneToggled.emit(todo);
+    const updatedTodo: Todo = {
+      ...todo,
+      done: !todo.done,
+    };
+
+    this.doneToggled.emit(updatedTodo);
   }
 
   delete(id: string) {
