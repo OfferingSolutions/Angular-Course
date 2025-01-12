@@ -6,11 +6,10 @@ import {TodoDetailFormComponent} from "@todo/todo-ui";
 import {Todo, TodoService} from "@todo/todo-domain";
 
 @Component({
-  selector: 'app-todo-detail',
-  standalone: true,
-  imports: [TodoDetailFormComponent, MatProgressSpinner],
-  templateUrl: './todo-detail.component.html',
-  styleUrl: './todo-detail.component.scss',
+    selector: 'app-todo-detail',
+    imports: [TodoDetailFormComponent, MatProgressSpinner],
+    templateUrl: './todo-detail.component.html',
+    styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent {
   private readonly todoService = inject(TodoService);
