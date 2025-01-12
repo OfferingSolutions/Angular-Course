@@ -5,15 +5,14 @@ import {MatCheckbox} from "@angular/material/checkbox";
 import {CapitalizePipe} from "../../pipes/capitalize.pipe";
 
 @Component({
-  selector: 'app-todo-list',
-  standalone: true,
-  imports: [
-    MatButton,
-    MatCheckbox,
-    CapitalizePipe
-  ],
-  templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.scss'
+    selector: 'app-todo-list',
+    imports: [
+        MatButton,
+        MatCheckbox,
+        CapitalizePipe
+    ],
+    templateUrl: './todo-list.component.html',
+    styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
   todos = input.required<Todo[]>();
