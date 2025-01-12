@@ -5,11 +5,10 @@ import { Todo } from '@todo/todo-domain';
 import { TodoStore } from '../../../../../domain/src/lib/state/todo.store';
 
 @Component({
-  selector: 'app-todo-detail',
-  standalone: true,
-  imports: [TodoDetailFormComponent, MatProgressSpinner],
-  templateUrl: './todo-detail.component.html',
-  styleUrl: './todo-detail.component.scss',
+    selector: 'app-todo-detail',
+    imports: [TodoDetailFormComponent, MatProgressSpinner],
+    templateUrl: './todo-detail.component.html',
+    styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent {
   private readonly todoStore = inject(TodoStore);
