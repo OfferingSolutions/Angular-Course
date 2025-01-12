@@ -6,8 +6,7 @@ import {MatInput} from "@angular/material/input";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
-  selector: 'app-todo-form',
-  standalone: true,
+    selector: 'app-todo-form',
     imports: [
         MatFormField,
         MatIcon,
@@ -17,8 +16,8 @@ import {FormControl, ReactiveFormsModule} from "@angular/forms";
         MatSuffix,
         ReactiveFormsModule
     ],
-  templateUrl: './todo-form.component.html',
-  styleUrl: './todo-form.component.scss'
+    templateUrl: './todo-form.component.html',
+    styleUrl: './todo-form.component.scss'
 })
 export class TodoFormComponent {
 
