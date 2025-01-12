@@ -6,11 +6,10 @@ import {RouterLink} from '@angular/router';
 import {Todo} from "@todo/todo-domain";
 
 @Component({
-  selector: 'app-todo-list',
-  standalone: true,
-  imports: [MatButton, MatCheckbox, CapitalizePipe, RouterLink],
-  templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.scss',
+    selector: 'app-todo-list',
+    imports: [MatButton, MatCheckbox, CapitalizePipe, RouterLink],
+    templateUrl: './todo-list.component.html',
+    styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
   todos = input.required<Todo[]>();

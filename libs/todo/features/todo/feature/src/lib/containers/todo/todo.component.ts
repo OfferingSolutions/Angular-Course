@@ -9,22 +9,21 @@ import {Todo} from "@todo/todo-domain";
 import {TodoStore} from "../../../../../domain/src/lib/state/todo.store";
 
 @Component({
-  selector: 'app-todo',
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    TodoHeaderComponent,
-    TodoFormComponent,
-    TodoListComponent,
-  ],
-  templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss',
-  providers: [TodoStore]
+    selector: 'app-todo',
+    imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        TodoHeaderComponent,
+        TodoFormComponent,
+        TodoListComponent,
+    ],
+    templateUrl: './todo.component.html',
+    styleUrl: './todo.component.scss',
+    providers: [TodoStore]
 })
 export class TodoComponent implements OnInit {
   private readonly todoStore = inject(TodoStore);
