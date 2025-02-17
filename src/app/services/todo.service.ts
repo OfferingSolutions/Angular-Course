@@ -1,7 +1,6 @@
-import {computed, inject, Injectable, signal} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Todo} from "../models/todo.models";
-import {take} from "rxjs";
+import { computed, inject, Injectable, signal } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Todo } from "../models/todo.models";
 
 const BASE_URL = 'https://sampletodobackend.azurewebsites.net/api/v1';
 
@@ -26,7 +25,7 @@ export class TodoService {
   getAll() {
     const url = `${BASE_URL}/todos`;
 
-    this.http.get<Todo[]>(url).pipe(take(1)).subscribe((todos) => {
+    this.http.get<Todo[]>(url).subscribe((todos) => {
       this.todos.set(todos);
     });
   }
