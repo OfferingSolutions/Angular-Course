@@ -1,10 +1,9 @@
-import {Component, inject, input} from '@angular/core';
-import {toObservable, toSignal} from "@angular/core/rxjs-interop";
-import {switchMap} from "rxjs";
-import {TodoService} from "../../services/todo.service";
-import {TodoDetailFormComponent} from "../../presentationals/todo-detail-form/todo-detail-form.component";
-import {MatProgressSpinner} from "@angular/material/progress-spinner";
-import {Todo} from "../../models/todo.models";
+import { Component, computed, inject, input, resource } from '@angular/core';
+import { lastValueFrom } from "rxjs";
+import { TodoService } from "../../services/todo.service";
+import { TodoDetailFormComponent } from "../../presentationals/todo-detail-form/todo-detail-form.component";
+import { MatProgressSpinner } from "@angular/material/progress-spinner";
+import { Todo } from "../../models/todo.models";
 
 @Component({
     selector: 'app-todo-detail',
@@ -13,13 +12,17 @@ import {Todo} from "../../models/todo.models";
     styleUrl: './todo-detail.component.scss'
 })
 export class TodoDetailComponent {
-  private readonly todoService = inject(TodoService);
+    readonly id = input.required<string>();
+    readonly #todoService = inject(TodoService);
+    readonly #todoResource = resource({
+        request: this.id,
+        loader: (param) =>
+            lastValueFrom(this.#todoService.get(param.request))
+    });
 
-  readonly id = input.required<string>();
+    todo = computed(() => this.#todoResource.value() ?? null);
 
-  readonly todo = toSignal(toObservable(this.id).pipe(switchMap((id) => this.todoService.get(id))))
-
-  save(todo: Todo): void {
-    this.todoService.update(todo)
-  }
+    save(todo: Todo): void {
+        this.#todoService.update(todo)
+    }
 }
